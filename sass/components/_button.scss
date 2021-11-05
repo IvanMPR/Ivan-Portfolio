@@ -1,0 +1,40 @@
+.btn {
+  text-transform: uppercase;
+  padding: 1rem 6rem;
+  border-radius: 10rem;
+  transition: background-color 0.2s;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-hero-contact {
+  background: $color-primary;
+  color: $color-text;
+  font-size: $font-l;
+  animation: moveInBottom 0.5s ease-out 0.75s backwards;
+
+  &:hover {
+    background: $color-primary-offset;
+  }
+}
+
+.btn__form {
+  border: none;
+  padding: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+  background: $color-primary;
+  color: $color-text;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: 'Poppins', sans-serif;
+  font-size: $font-l;
+  overflow: hidden;
+  border-radius: 2px;
+
+  &:hover {
+    background: $color-primary-offset;
+  }
+}

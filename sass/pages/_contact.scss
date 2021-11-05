@@ -1,0 +1,85 @@
+.section-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.phone {
+  margin: 0 auto 3rem;
+  // background: cornsilk;
+  width: 100%;
+  text-align: center;
+
+  &__toggler {
+    position: relative;
+    height: 3rem;
+  }
+
+  &__reveal,
+  &__hide {
+    @include absoluteCenter;
+  }
+
+  &__reveal,
+  &__hide {
+    color: $color-text;
+    transition: all 0.2s;
+    animation: colorize 3s alternate-reverse infinite;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__info {
+    font-size: $font-l;
+    color: $color-text;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    margin: auto;
+    transition: all 0.5s;
+
+    &--viber,
+    &--phone,
+    &--whatsapp {
+      margin-right: 2rem;
+    }
+
+    &--viber {
+      color: $color-viber;
+    }
+    &--whatsapp {
+      color: $color-whatsapp;
+    }
+
+    &--data {
+      font-size: $font-xl;
+    }
+  }
+}
+
+.form {
+  width: 50%;
+  margin: 0 auto 6rem;
+
+  &__label {
+    margin-bottom: 1rem;
+    color: $color-text;
+    font-size: $font-normal;
+  }
+
+  &__input {
+    padding: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: $font-l;
+  }
+
+  &__mini-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}

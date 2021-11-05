@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  &__social-icons {
+    display: flex;
+  }
+
+  & .fa-github,
+  & .fa-linkedin {
+    color: $color-text;
+    margin-right: 2rem;
+  }
+
+  &__cv-button {
+    font-size: $font-normal;
+  }
+
+  &__languages--english-flag,
+  &__languages--serbian-flag {
+    margin: 0 1rem;
+    height: 2.5rem;
+    border-radius: 5%;
+  }
+}

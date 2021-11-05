@@ -1,0 +1,97 @@
+.active {
+  border-bottom: 0.5rem solid $color-primary !important;
+}
+
+.light {
+  color: $color-text;
+}
+
+// .btn-animated {
+//   animation: moveInBottom 0.5s ease-out 0.75s backwards;
+// }
+
+.move-from-left {
+  animation: moveInLeft 1s ease-out;
+}
+
+.move-from-right {
+  animation: moveInRight 1s ease-out;
+}
+
+.slideInElement {
+  /* animation: slideIn 0.4s ease-out; */
+  animation: moveInBottom 0.4s ease-out;
+}
+
+.ripple-btn {
+  animation: ripple 0.8s;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.invisible {
+  opacity: 0;
+  width: 0;
+}
+
+.wrapper {
+  margin: 2rem 0;
+}
+
+.wrapper-l {
+  margin: 4rem 0;
+}
+.container {
+  padding: 1rem;
+  max-width: 120rem;
+  margin: auto;
+}
+.text-container {
+  padding: 1rem;
+  max-width: 72rem;
+  margin: auto;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.section {
+  width: 100%;
+  min-height: 48rem;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+
+  // &__absolute {
+  //   width: 100%;
+  //   min-height: 48rem;
+  //   position: relative;
+  //   background: rebeccapurple;
+  //   // transition: all 0.9s;
+  // }
+}
+
+// .subsection {
+//   @include absoluteCenter;
+//   // margin-top: 10rem;
+//   // top: 25%;
+//   // left: 50%;
+//   // transform: translate();
+//   // background: burlywood;
+//   width: 100%;
+//   min-height: 100%;
+// }
+
+// .sub-heading {
+//   color: $color-text-offset;
+// }
+
+// .sub-heading-icon {
+//   margin: 0 1rem;
+// }
+
+/* ///////////////////////////// */
+.scale-up {
+  animation: scaleUp 1s ease-out 1 forwards;
+}

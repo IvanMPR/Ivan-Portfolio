@@ -1,0 +1,12 @@
+.section__about {
+  //   background: cornflowerblue;
+
+  &--subheadings {
+    //  background: crimson;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+  }
+}
