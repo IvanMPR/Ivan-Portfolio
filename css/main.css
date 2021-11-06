@@ -783,7 +783,7 @@ body {
   display: flex;
   padding: 1rem;
   gap: 1rem;
-  border: 0.25rem solid #ff335f;
+  border: 0.25rem solid #ffffff;
 }
 
 .section__projects--item-left, .section__projects--item-right {
