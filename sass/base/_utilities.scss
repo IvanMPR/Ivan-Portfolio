@@ -72,6 +72,15 @@
   // }
 }
 
+.dark-contrast {
+  background: rgba($color-bgd, $alpha: 0.8) !important;
+  & a,
+  p {
+    color: $color-text !important;
+    font-weight: 400 !important;
+  }
+}
+
 // .subsection {
 //   @include absoluteCenter;
 //   // margin-top: 10rem;
