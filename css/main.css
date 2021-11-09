@@ -499,7 +499,7 @@ body {
 }
 
 .header__logo--back-image {
-  background: url(../../img/Selfie.jpeg) no-repeat center center/cover;
+  background: url(img/Selfie.jpeg) no-repeat center center/cover;
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
   z-index: 1;
