@@ -26,3 +26,33 @@ phoneIconParentDiv.addEventListener('click', function (e) {
     phoneNumber.classList.toggle('invisible');
   }
 });
+
+// Ripple effect on submit button
+
+const submitBtn = document.querySelector('.btn__form');
+
+submitBtn.addEventListener('click', function (e) {
+  // e.preventDefault();
+  rippleButton(e, this);
+});
+function rippleButton(event, element) {
+  const x = event.offsetX;
+  const y = event.offsetY;
+
+  const circle = document.createElement('span');
+  circle.style.position = 'absolute';
+  circle.style.left = `${x}px`;
+  circle.style.top = `${y}px`;
+  circle.style.transform = 'translate(-50%, -50%)';
+  circle.style.width = '15rem';
+  circle.style.height = '15rem';
+  circle.style.borderRadius = '50%';
+  circle.style.backgroundColor = '#fff';
+  circle.style.opacity = '0.6';
+  circle.classList.add('ripple-btn');
+
+  element.appendChild(circle);
+  setTimeout(() => {
+    element.removeChild(circle);
+  }, 500);
+}
