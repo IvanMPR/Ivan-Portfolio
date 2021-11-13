@@ -1,12 +1,7 @@
 .section__projects {
-  // background: cornflowerblue;
-  // width: 100%;
-  // min-height: 48rem;
-
   &--item {
     width: 100%;
     height: 50rem;
-    // background: blanchedalmond;
     display: flex;
     padding: 1rem;
     gap: 1rem;
@@ -14,27 +9,17 @@
 
     &-left,
     &-right {
+      display: flex;
+      overflow: hidden;
+      position: relative;
       width: 50%;
       height: 100%;
-      // background: cadetblue;
       transition: all 0.25s ease;
       flex: 1;
-      // cursor: pointer;
-
-      &:hover {
-        flex: 3;
-      }
-    }
-
-    &-left {
-      display: flex;
-      overflow: hidden;
-      position: relative;
 
       .item__image {
         width: 100%;
         height: 100%;
-        // background: cyan;
 
         &--thumb {
           height: 100%;
@@ -46,67 +31,6 @@
 
       .item__info {
         position: absolute;
-        top: 0;
-        left: 100%;
-        width: 40%;
-        height: 100%;
-        background: rgba($color-text, $alpha: 0.95);
-        padding: 1rem;
-        text-align: center;
-        transition: all 0.5s ease;
-
-        &--title {
-          font-size: $font-l;
-          color: $color-bgd;
-        }
-
-        &--live-link {
-          // display: inline-block;
-          color: $color-bgd;
-          font-size: $font-normal;
-          text-decoration: underline;
-          text-decoration-color: $color-primary;
-          text-underline-offset: 0.5rem;
-          // margin-bottom: 1rem;
-        }
-
-        &--desc-text {
-          color: $color-bgd;
-          font-size: $font-normal;
-          font-style: italic;
-        }
-      }
-
-      &:hover > .item__info {
-        left: 60%;
-      }
-    }
-
-    &-right {
-      display: flex;
-      justify-content: flex-end;
-      overflow: hidden;
-      position: relative;
-
-      .item__image {
-        width: 100%;
-        height: 100%;
-        // background: cyan;
-
-        &--thumb {
-          height: 100%;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-        }
-      }
-
-      .item__info {
-        position: absolute;
-        top: 0;
-        left: -40%; // ????
-        width: 40%;
-        height: 100%;
         background: rgba($color-text, $alpha: 0.8);
         padding: 1rem;
         text-align: center;
@@ -118,13 +42,11 @@
         }
 
         &--live-link {
-          // display: inline-block;
           color: $color-bgd;
           font-size: $font-normal;
           text-decoration: underline;
           text-decoration-color: $color-primary;
           text-underline-offset: 0.5rem;
-          // margin-bottom: 1rem;
         }
 
         &--desc-text {
@@ -134,22 +56,38 @@
         }
       }
 
-      &:hover > .item__info {
-        left: 0; // ????
+      &:hover {
+        flex: 3;
       }
     }
 
-    // &-right {
-    //   width: 50%;
-    //   height: 100%;
-    //   background: cadetblue;
-    //   transition: all 0.2s;
-    //   flex: 1;
+    &-left {
+      .item__info {
+        top: 0;
+        left: 100%;
+        width: 40%;
+        height: 100%;
+      }
 
-    //   &:hover {
-    //     flex: 3;
-    //   }
-    // }
+      &:hover > .item__info {
+        left: 60%;
+      }
+    }
+
+    &-right {
+      justify-content: flex-end;
+
+      .item__info {
+        top: 0;
+        left: -40%; // ????
+        width: 40%;
+        height: 100%;
+      }
+
+      &:hover > .item__info {
+        left: 0;
+      }
+    }
   }
 }
 
@@ -157,10 +95,42 @@
   .section__projects {
     &--item {
       flex-direction: column;
+      height: 60rem;
 
       &-left,
       &-right {
         width: 100%;
+
+        &:hover {
+          flex: 1;
+        }
+      }
+
+      &-right {
+        .item__image {
+          position: relative;
+          left: 40%;
+        }
+
+        .item__info {
+          top: 0;
+          left: 0; // ????
+          width: 40%;
+          height: 100%;
+        }
+      }
+
+      &-left {
+        .item__image {
+          position: relative;
+          right: 0%;
+        }
+        .item__info {
+          top: 0;
+          left: 60%; // ????
+          width: 40%;
+          height: 100%;
+        }
       }
     }
   }
