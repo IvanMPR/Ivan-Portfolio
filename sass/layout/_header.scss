@@ -1,6 +1,6 @@
 .header {
   width: 100%;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 
   &__navbar {
     display: flex;
@@ -123,5 +123,36 @@
     font-size: $font-l;
     font-weight: bold;
     margin-right: 1rem;
+  }
+
+  &__hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    &__ul {
+      display: none;
+    }
+
+    &__hamburger {
+      display: grid;
+      place-content: center;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      background: $color-bgd-offset;
+      transition: background 0.2s;
+
+      &:hover {
+        background: $color-border;
+      }
+    }
+
+    &__navbar--middle {
+      margin-left: auto;
+      margin-right: 1rem;
+    }
   }
 }
