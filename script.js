@@ -1,4 +1,4 @@
-'use-strict';
+import { openModal, appendList } from './pages/modules/global.js';
 
 // Ripple effect on 'Contact me' button
 
@@ -29,3 +29,7 @@ function rippleButton(event, element) {
     element.removeChild(circle);
   }, 500);
 }
+
+const hamburger = document.querySelector('.header__hamburger');
+const modal = document.querySelector('.header__hamburger-modal');
+openModal(hamburger, modal);

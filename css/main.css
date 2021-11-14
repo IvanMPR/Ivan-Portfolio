@@ -114,8 +114,8 @@
             transform: 0;
   }
   to {
-    -webkit-transform: scale(4);
-            transform: scale(4);
+    -webkit-transform: scale(90);
+            transform: scale(90);
   }
 }
 
@@ -125,8 +125,8 @@
             transform: 0;
   }
   to {
-    -webkit-transform: scale(4);
-            transform: scale(4);
+    -webkit-transform: scale(90);
+            transform: scale(90);
   }
 }
 
@@ -590,9 +590,33 @@ body {
     background: #252526;
     -webkit-transition: background 0.2s;
     transition: background 0.2s;
+    position: relative;
   }
   .header__hamburger:hover {
     background: #2d2d2d;
+  }
+  .header__hamburger-modal {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: #ffffff;
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .header__hamburger-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: yellow;
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+    z-index: 3;
   }
   .header__navbar--middle {
     margin-left: auto;
