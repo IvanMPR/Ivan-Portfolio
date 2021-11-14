@@ -92,6 +92,9 @@
 }
 
 @media (max-width: 900px) {
+  html {
+    font-size: 55%;
+  }
   .section__projects {
     &--item {
       flex-direction: column;
