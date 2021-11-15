@@ -11,13 +11,15 @@
 export function openModal(el, subEl) {
   el.addEventListener('click', function () {
     subEl.style.zIndex = 1;
+
     subEl.classList.add('scale-up');
-    //  appendList(subEl);
+
+    appendList(subEl);
   });
 }
 
 export function appendList(parent) {
-  const html = `<ul class="header__ul">
+  const html = `<ul class="header__ul ">
    <li class="header__link-container">
      <a href="index.html" class="header__link active"
        ><span class="header__link-ordinal">01</span>home</a

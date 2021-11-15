@@ -105,7 +105,7 @@
         width: 100%;
 
         &:hover {
-          flex: 1;
+          flex: 3;
         }
       }
 
@@ -126,7 +126,7 @@
       &-left {
         .item__image {
           position: relative;
-          right: 0%;
+          left: 0;
         }
         .item__info {
           top: 0;
