@@ -98,14 +98,15 @@
   .section__projects {
     &--item {
       flex-direction: column;
-      height: 60rem;
+      height: 70rem;
+      gap: 3rem;
 
       &-left,
       &-right {
         width: 100%;
 
         &:hover {
-          flex: 3;
+          flex: 1;
         }
       }
 
@@ -126,7 +127,9 @@
       &-left {
         .item__image {
           position: relative;
-          left: 0;
+          // left: 0;
+          // left: 0;
+          width: 60%;
         }
         .item__info {
           top: 0;

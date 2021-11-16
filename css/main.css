@@ -114,8 +114,8 @@
             transform: 0;
   }
   to {
-    -webkit-transform: scale(90);
-            transform: scale(90);
+    -webkit-transform: scale(100);
+            transform: scale(100);
   }
 }
 
@@ -125,8 +125,8 @@
             transform: 0;
   }
   to {
-    -webkit-transform: scale(90);
-            transform: scale(90);
+    -webkit-transform: scale(100);
+            transform: scale(100);
   }
 }
 
@@ -462,14 +462,13 @@ body {
   display: -ms-grid;
   display: grid;
   place-content: center;
-  width: 8rem;
-  height: 8rem;
+  width: 5rem;
+  height: 5rem;
   -webkit-perspective: 150rem;
           perspective: 150rem;
   -moz-perspective: 150rem;
   cursor: pointer;
   border-radius: 50%;
-  outline: 0.25rem solid #ff335f;
   outline-offset: 0.3rem;
 }
 
@@ -595,31 +594,22 @@ body {
   .header__hamburger:hover {
     background: #2d2d2d;
   }
+  .header__hamburger-icons {
+    position: static;
+    z-index: 5000;
+  }
   .header__hamburger-modal {
-    position: relative;
-    width: 3rem;
-    height: 3rem;
+    position: static;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
-    background: #ffffff;
-    z-index: -1;
+    background-color: whitesmoke;
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-  }
-  .header__hamburger-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: yellow;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: -ms-grid;
-    display: grid;
-    place-content: center;
+    z-index: -5;
   }
   .header__navbar--middle {
     margin-left: auto;
@@ -973,15 +963,16 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 60rem;
+    height: 70rem;
+    gap: 3rem;
   }
   .section__projects--item-left, .section__projects--item-right {
     width: 100%;
   }
   .section__projects--item-left:hover, .section__projects--item-right:hover {
-    -webkit-box-flex: 3;
-        -ms-flex: 3;
-            flex: 3;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
   .section__projects--item-right .item__image {
     position: relative;
@@ -995,7 +986,7 @@ body {
   }
   .section__projects--item-left .item__image {
     position: relative;
-    left: 0;
+    width: 60%;
   }
   .section__projects--item-left .item__info {
     top: 0;

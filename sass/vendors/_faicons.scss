@@ -1,6 +1,8 @@
 // hamburger menu
 .fa-bars {
   color: $color-text;
+  // position: relative;
+  // z-index: 500;
   &:hover {
     cursor: pointer;
   }
