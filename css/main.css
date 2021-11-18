@@ -595,7 +595,7 @@ body {
     background: #2d2d2d;
   }
   .header__hamburger-icons {
-    position: static;
+    position: relative;
     z-index: 5000;
   }
   .header__hamburger-modal {
@@ -1025,9 +1025,29 @@ body {
 
 .fa-bars {
   color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 5000;
 }
 
 .fa-bars:hover {
+  cursor: pointer;
+}
+
+.fa-times {
+  color: #0e141b;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 4500;
+}
+
+.fa-times:hover {
   cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

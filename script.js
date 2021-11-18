@@ -1,4 +1,5 @@
-import { openModal } from './pages/modules/global.js';
+//prettier-ignore
+import { openModal, resetInitials, toggleNaviButtons, closeModal } from './pages/modules/global.js';
 
 // Ripple effect on 'Contact me' button
 
@@ -30,6 +31,11 @@ function rippleButton(event, element) {
   }, 500);
 }
 
+resetInitials();
+toggleNaviButtons();
+// ///////////////////
+// const x = document.querySelector('.fa-times');
 const hamburger = document.querySelector('.header__hamburger-icons');
 const modal = document.querySelector('.header__hamburger-modal');
 openModal(hamburger, modal);
+closeModal(modal);

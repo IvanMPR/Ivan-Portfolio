@@ -1,8 +1,17 @@
 // hamburger menu
 .fa-bars {
   color: $color-text;
-  // position: relative;
-  // z-index: 500;
+  @include absoluteCenter;
+  z-index: 5000;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.fa-times {
+  color: $color-bgd;
+  @include absoluteCenter;
+  z-index: 4500;
   &:hover {
     cursor: pointer;
   }
