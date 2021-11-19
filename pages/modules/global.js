@@ -21,13 +21,15 @@ export function openModal(el, subEl) {
   });
 }
 
-export function closeModal(subEl) {
-  x.addEventListener('click', function (e) {
-    console.log(e.target);
-    subEl.style.zIndex = -5;
-    subEl.classList.remove('scale-up');
-  });
-}
+// export function closeModal(subEl) {
+//   x.addEventListener('click', function (e) {
+//     console.log(e.target);
+//     subEl.style.zIndex = -5;
+//     subEl.classList.remove('scale-up');
+//   });
+// }
+const hamburger = document.querySelector('.header__hamburger-icons');
+const modal = document.querySelector('.header__hamburger-modal');
 const bars = document.querySelector('.fa-bars');
 const x = document.querySelector('.fa-times');
 
@@ -44,12 +46,20 @@ export function toggleNaviButtons() {
       bars.classList.toggle('invisible');
       x.classList.toggle('invisible');
       // open modal
-    } else {
-      setTimeout(() => {
-        x.classList.toggle('invisible');
-        bars.classList.toggle('invisible');
-      }, 200);
+      modal.style.zIndex = 4500;
+
+      modal.classList.add('scale-up');
+    }
+    if (e.target.classList.contains('fa-times')) {
+      console.log(e.target);
+
+      x.classList.toggle('invisible');
+      bars.classList.toggle('invisible');
+
       // close modal
+
+      modal.style.zIndex = -5;
+      modal.classList.remove('scale-up');
     }
   });
 }

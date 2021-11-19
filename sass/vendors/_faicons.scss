@@ -10,6 +10,10 @@
 
 .fa-times {
   color: $color-bgd;
+  // width: 5rem;
+  // height: 5rem;
+  // border-radius: 50%;
+  // background: $color-text-offset;
   @include absoluteCenter;
   z-index: 4500;
   &:hover {

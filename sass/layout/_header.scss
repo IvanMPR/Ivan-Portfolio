@@ -159,13 +159,14 @@
       }
 
       &-modal {
-        position: static;
+        position: relative;
         width: 4rem;
         height: 4rem;
         border-radius: 50%;
         background-color: whitesmoke;
         @include absoluteCenter;
         z-index: -5;
+        transition: all 0.2s;
       }
     }
 
