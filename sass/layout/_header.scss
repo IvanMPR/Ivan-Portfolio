@@ -137,42 +137,100 @@
     }
 
     &__hamburger {
-      display: grid;
-      place-content: center;
+      display: block;
+      position: relative;
       width: 5rem;
       height: 5rem;
       border-radius: 50%;
       background: $color-bgd-offset;
-      transition: background 0.2s;
-      position: relative;
-      // z-index: 5000;
 
-      &:hover {
-        background: $color-border;
-      }
+      .navigation {
+        &__checkbox {
+          display: none;
 
-      &-icons {
-        position: relative;
-        // top: 10%;
-        // left: 90%;
-        z-index: 5000;
-      }
+          &:checked ~ .navigation__background {
+            transform: scale(80);
+          }
+          &:checked ~ .navigation__nav {
+            height: 100vh;
+            width: 100%;
+            opacity: 1;
+            z-index: 1500;
+          }
+          // add fixed position to menu ???
+        }
+        &__button {
+          background-color: $color-bgd-offset;
+          height: 5rem;
+          width: 5rem;
+          border-radius: 50%;
+          @include absoluteCenter;
 
-      &-modal {
-        position: relative;
-        width: 4rem;
-        height: 4rem;
-        border-radius: 50%;
-        background-color: whitesmoke;
-        @include absoluteCenter;
-        z-index: -5;
-        transition: all 0.2s;
+          z-index: 2000;
+        }
+        &__background {
+          height: 4rem;
+          width: 4rem;
+          border-radius: 50%;
+          @include absoluteCenter;
+
+          background-color: $color-text;
+          z-index: 1000;
+
+          transition: transform 0.8s ease-out;
+
+          // transform: scale(80);
+        }
+        &__nav {
+          position: fixed;
+          top: 0;
+          right: 0;
+          z-index: -1500;
+          height: 0;
+          width: 0;
+          opacity: 0;
+          transition: opacity 0.8s ease-in;
+        }
+
+        &__list {
+          @include absoluteCenter;
+          display: flex;
+          flex-direction: column;
+        }
+
+        &__link-container {
+          margin: 1rem 0;
+        }
+
+        &__link {
+          &:link,
+          &:visited {
+            color: $color-bgd;
+            display: inline-block;
+            font-size: $font-menu;
+            padding-bottom: 0.5rem;
+            border-bottom: 0.5rem solid $color-text-offset;
+            transition: border 0.25s;
+          }
+
+          &:hover,
+          &:active {
+            border-bottom: 0.5rem solid $color-primary;
+          }
+        }
+
+        &__link-ordinal {
+          color: $color-text-offset;
+          font-size: $font-menu;
+          font-weight: bold;
+          margin-right: 2rem;
+        }
       }
     }
 
-    &__navbar--middle {
-      margin-left: auto;
-      margin-right: 1rem;
-    }
+    // &__navbar--middle {
+    //   margin-left: auto;
+    //   margin-right: 1rem;
+    // }
   }
 }
