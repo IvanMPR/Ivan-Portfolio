@@ -157,6 +157,18 @@
             opacity: 1;
             z-index: 1500;
           }
+
+          &:checked + .navigation__button .navigation__icon {
+            background-color: transparent;
+          }
+          &:checked + .navigation__button .navigation__icon::before {
+            top: 0;
+            transform: rotate(135deg);
+          }
+          &:checked + .navigation__button .navigation__icon::after {
+            top: 0;
+            transform: rotate(-135deg);
+          }
           // add fixed position to menu ???
         }
         &__button {
@@ -167,6 +179,15 @@
           @include absoluteCenter;
 
           z-index: 2000;
+          text-align: center;
+          cursor: pointer;
+
+          &:hover .navigation__icon::before {
+            top: -1rem;
+          }
+          &:hover .navigation__icon::after {
+            top: 1rem;
+          }
         }
         &__background {
           height: 4rem;
@@ -174,22 +195,22 @@
           border-radius: 50%;
           @include absoluteCenter;
 
-          background-color: $color-text;
+          background-color: $color-black;
           z-index: 1000;
 
-          transition: transform 0.8s ease-out;
+          transition: transform 0.4s ease-in;
 
           // transform: scale(80);
         }
         &__nav {
           position: fixed;
           top: 0;
-          right: 0;
+          left: 0;
           z-index: -1500;
           height: 0;
           width: 0;
           opacity: 0;
-          transition: opacity 0.8s ease-in;
+          transition: opacity 0.4s ease-in;
         }
 
         &__list {
@@ -205,11 +226,11 @@
         &__link {
           &:link,
           &:visited {
-            color: $color-bgd;
+            color: $color-text;
             display: inline-block;
             font-size: $font-menu;
             padding-bottom: 0.5rem;
-            border-bottom: 0.5rem solid $color-text-offset;
+            border-bottom: 0.5rem solid $color-bgd-offset;
             transition: border 0.25s;
           }
 
@@ -220,10 +241,39 @@
         }
 
         &__link-ordinal {
-          color: $color-text-offset;
+          color: $color-text;
           font-size: $font-menu;
           font-weight: bold;
           margin-right: 2rem;
+        }
+
+        &__icon {
+          position: relative;
+          margin-top: 2.3rem;
+
+          &,
+          &::before,
+          &::after {
+            width: 2.75rem;
+            height: 2px;
+            background-color: $color-text;
+            display: inline-block;
+            border-radius: 10rem;
+          }
+
+          &::before,
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            transition: all 0.2s;
+          }
+          &::before {
+            top: -0.8rem;
+          }
+          &::after {
+            top: 0.8rem;
+          }
         }
       }
     }

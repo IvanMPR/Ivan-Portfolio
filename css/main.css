@@ -600,6 +600,19 @@ body {
     opacity: 1;
     z-index: 1500;
   }
+  .header__hamburger .navigation__checkbox:checked + .navigation__button .navigation__icon {
+    background-color: transparent;
+  }
+  .header__hamburger .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+    top: 0;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  .header__hamburger .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+    top: 0;
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+  }
   .header__hamburger .navigation__button {
     background-color: #252526;
     height: 5rem;
@@ -611,6 +624,14 @@ body {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     z-index: 2000;
+    text-align: center;
+    cursor: pointer;
+  }
+  .header__hamburger .navigation__button:hover .navigation__icon::before {
+    top: -1rem;
+  }
+  .header__hamburger .navigation__button:hover .navigation__icon::after {
+    top: 1rem;
   }
   .header__hamburger .navigation__background {
     height: 4rem;
@@ -621,23 +642,23 @@ body {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    background-color: #ffffff;
+    background-color: #000;
     z-index: 1000;
-    -webkit-transition: -webkit-transform 0.8s ease-out;
-    transition: -webkit-transform 0.8s ease-out;
-    transition: transform 0.8s ease-out;
-    transition: transform 0.8s ease-out, -webkit-transform 0.8s ease-out;
+    -webkit-transition: -webkit-transform 0.4s ease-in;
+    transition: -webkit-transform 0.4s ease-in;
+    transition: transform 0.4s ease-in;
+    transition: transform 0.4s ease-in, -webkit-transform 0.4s ease-in;
   }
   .header__hamburger .navigation__nav {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     z-index: -1500;
     height: 0;
     width: 0;
     opacity: 0;
-    -webkit-transition: opacity 0.8s ease-in;
-    transition: opacity 0.8s ease-in;
+    -webkit-transition: opacity 0.4s ease-in;
+    transition: opacity 0.4s ease-in;
   }
   .header__hamburger .navigation__list {
     position: absolute;
@@ -657,11 +678,11 @@ body {
     margin: 1rem 0;
   }
   .header__hamburger .navigation__link:link, .header__hamburger .navigation__link:visited {
-    color: #0e141b;
+    color: #ffffff;
     display: inline-block;
     font-size: 4.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: 0.5rem solid #818a91;
+    border-bottom: 0.5rem solid #252526;
     -webkit-transition: border 0.25s;
     transition: border 0.25s;
   }
@@ -669,10 +690,34 @@ body {
     border-bottom: 0.5rem solid #ff335f;
   }
   .header__hamburger .navigation__link-ordinal {
-    color: #818a91;
+    color: #ffffff;
     font-size: 4.5rem;
     font-weight: bold;
     margin-right: 2rem;
+  }
+  .header__hamburger .navigation__icon {
+    position: relative;
+    margin-top: 2.3rem;
+  }
+  .header__hamburger .navigation__icon, .header__hamburger .navigation__icon::before, .header__hamburger .navigation__icon::after {
+    width: 2.75rem;
+    height: 2px;
+    background-color: #ffffff;
+    display: inline-block;
+    border-radius: 10rem;
+  }
+  .header__hamburger .navigation__icon::before, .header__hamburger .navigation__icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .header__hamburger .navigation__icon::before {
+    top: -0.8rem;
+  }
+  .header__hamburger .navigation__icon::after {
+    top: 0.8rem;
   }
 }
 
