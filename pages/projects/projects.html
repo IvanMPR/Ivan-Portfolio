@@ -23,12 +23,12 @@
           </div>
           <span class="header__logo--name">Ivan</span>
         </div>
-        <div class="header__navbar--middle">
+        <!-- <div class="header__navbar--middle">
           <div class="header__theme-toggler">
             <i class="far fa-lightbulb fa-3x dark hidden"></i>
             <i class="far fa-lightbulb fa-3x light"></i>
           </div>
-        </div>
+        </div> -->
         <div class="header__navbar--right">
           <ul class="header__ul">
             <li class="header__link-container">
@@ -37,9 +37,7 @@
               >
             </li>
             <li class="header__link-container">
-              <a
-                href="../../pages/projects/projects.html"
-                class="header__link active"
+              <a href="projects.html" class="header__link active"
                 ><span class="header__link-ordinal">02</span>projects</a
               >
             </li>
@@ -56,7 +54,45 @@
           </ul>
         </div>
         <div class="header__hamburger">
-          <i class="fas fa-bars fa-3x"></i>
+          <div class="navigation">
+            <input
+              type="checkbox"
+              class="navigation__checkbox"
+              id="navi-toggle"
+            />
+            <label for="navi-toggle" class="navigation__button">
+              <span class="navigation__icon"></span>
+            </label>
+            <div class="navigation__background">&nbsp;</div>
+            <nav class="navigation__nav">
+              <ul class="navigation__list">
+                <li class="navigation__link-container">
+                  <a href="../../index.html" class="navigation__link"
+                    ><span class="navigation__link-ordinal">01</span>home</a
+                  >
+                </li>
+                <li class="navigation__link-container">
+                  <a href="projects.html" class="navigation__link active"
+                    ><span class="navigation__link-ordinal">02</span>projects</a
+                  >
+                </li>
+                <li class="navigation__link-container">
+                  <a
+                    href="../../pages/about/about.html"
+                    class="navigation__link"
+                    ><span class="navigation__link-ordinal">03</span>about</a
+                  >
+                </li>
+                <li class="navigation__link-container">
+                  <a
+                    href="../../pages/contact/contact.html"
+                    class="navigation__link"
+                    ><span class="navigation__link-ordinal">04</span>contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </nav>
     </header>
