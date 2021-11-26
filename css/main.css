@@ -489,7 +489,7 @@ body {
 
 .header__logo--front-image {
   background: url(../../img/IvanEmojiCroped.png) no-repeat center center/cover;
-  z-index: 2;
+  z-index: 2000;
 }
 
 .header__logo--front-image:hover {
@@ -501,7 +501,7 @@ body {
   background: url(../../img/bg_self.jpeg) no-repeat center center/cover;
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
-  z-index: 1;
+  z-index: 1999;
 }
 
 .header__logo--name {
