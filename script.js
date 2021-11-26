@@ -1,5 +1,5 @@
 //prettier-ignore
-import {resetInitials, toggleNaviButtons} from './pages/modules/global.js';
+// import {resetInitials, toggleNaviButtons} from './pages/modules/global.js';
 
 // Ripple effect on 'Contact me' button
 
@@ -31,8 +31,8 @@ function rippleButton(event, element) {
   }, 500);
 }
 
-resetInitials();
-toggleNaviButtons();
+// resetInitials();
+// toggleNaviButtons();
 // ///////////////////
 // const x = document.querySelector('.fa-times');
 // const hamburger = document.querySelector('.header__hamburger-icons');

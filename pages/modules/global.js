@@ -28,38 +28,6 @@ export function openModal(el, subEl) {
 //     subEl.classList.remove('scale-up');
 //   });
 // }
-const hamburger = document.querySelector('.header__hamburger-icons');
-const modal = document.querySelector('.header__hamburger-modal');
-const bars = document.querySelector('.fa-bars');
-const x = document.querySelector('.fa-times');
 
-export function resetInitials() {
-  bars.classList.remove('invisible');
-  x.classList.remove('invisible');
-  x.classList.add('invisible');
-}
 
-export function toggleNaviButtons() {
-  const buttonsParent = document.querySelector('.header__hamburger-icons');
-  buttonsParent.addEventListener('click', function (e) {
-    if (e.target.classList.contains('fa-bars')) {
-      bars.classList.toggle('invisible');
-      x.classList.toggle('invisible');
-      // open modal
-      modal.style.zIndex = 4500;
 
-      modal.classList.add('scale-up');
-    }
-    if (e.target.classList.contains('fa-times')) {
-      console.log(e.target);
-
-      x.classList.toggle('invisible');
-      bars.classList.toggle('invisible');
-
-      // close modal
-
-      modal.style.zIndex = -5;
-      modal.classList.remove('scale-up');
-    }
-  });
-}
