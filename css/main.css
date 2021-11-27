@@ -1,3 +1,18 @@
+/*
+ 0 - 600px: Phone
+ 600px - 900px: Tablet portrait
+ 900px - 1200px: Tablet landscape
+ 1200px - 1800px: ~ Lap-Top 15-inches(default styles)
+ 1800px + : Big desktop
+
+ $breakpoint argument choices: 
+ - phone
+ - tab-p
+ - tab-l
+ - big-desk
+
+ 1em = 16px
+*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap");
 @-webkit-keyframes moveInLeft {
   0% {
@@ -215,6 +230,30 @@
 
 html {
   font-size: 62.5%;
+}
+
+@media (max-width: 37.5em) {
+  html {
+    font-size: 45%;
+  }
+}
+
+@media (min-width: 37.51em) and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (min-width: 56.26em) and (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media (min-width: 112.5em) {
+  html {
+    font-size: 65%;
+  }
 }
 
 body {
@@ -782,6 +821,26 @@ body {
   margin: 0 1rem;
 }
 
+@media (max-width: 37.5em) {
+  .footer__upper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: 37.51em) and (max-width: 56.25em) {
+  .footer__upper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .section__about--subheadings {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -874,6 +933,15 @@ body {
   font-size: 2.5rem;
 }
 
+@media (max-width: 37.5em) {
+  .phone__info {
+    font-size: 1.6rem;
+  }
+  .phone__info--data {
+    font-size: 2rem;
+  }
+}
+
 .form {
   width: 50%;
   margin: 0 auto 6rem;
@@ -899,6 +967,27 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (max-width: 37.5em) {
+  .form {
+    width: 95%;
+    margin: 0 auto 2rem;
+  }
+}
+
+@media (min-width: 37.51em) and (max-width: 56.25em) {
+  .form {
+    width: 90%;
+    margin: 0 auto 2.5rem;
+  }
+}
+
+@media (min-width: 56.26em) and (max-width: 75em) {
+  .form {
+    width: 70%;
+    margin: 0 auto 3rem;
+  }
 }
 
 .main {
@@ -955,6 +1044,12 @@ body {
   height: 45rem;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   background: url("../../img/bg_self.jpeg") no-repeat center center/cover;
+}
+
+@media (max-width: 37.5em) {
+  .main__image {
+    display: none;
+  }
 }
 
 .section__projects--item {

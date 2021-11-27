@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-content: space-between;
   width: 100%;
   border-top: 2px solid $color-bgd-offset;
 
@@ -44,6 +43,19 @@
       color: $color-text-offset;
       font-size: $font-normal;
       margin: 0 1rem;
+    }
+  }
+
+  @include respond(phone) {
+    &__upper {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+  @include respond(tab-p) {
+    &__upper {
+      display: flex;
+      // flex-direction: column;
     }
   }
 }

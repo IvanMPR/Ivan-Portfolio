@@ -43,4 +43,10 @@
       background: url('../../img/bg_self.jpeg') no-repeat center center/cover;
     }
   }
+
+  @include respond(phone) {
+    &__image {
+      display: none;
+    }
+  }
 }
