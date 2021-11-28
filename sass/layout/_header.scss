@@ -76,26 +76,26 @@
 
   /* Theme toggler - middle part of the navbar */
 
-  &__theme-toggler {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: $color-bgd-offset;
-    border-radius: 50%;
-    transition: background 0.2s;
-    display: grid;
-    place-content: center;
+  // &__theme-toggler {
+  //   position: relative;
+  //   width: 100%;
+  //   height: 100%;
+  //   background: $color-bgd-offset;
+  //   border-radius: 50%;
+  //   transition: background 0.2s;
+  //   display: grid;
+  //   place-content: center;
 
-    &:hover {
-      background: $color-border;
-    }
-  }
+  //   &:hover {
+  //     background: $color-border;
+  //   }
+  // }
 
   /* Position of the bulb inside of the parent */
-  .fa-lightbulb {
-    @include absoluteCenter;
-    cursor: pointer;
-  }
+  // .fa-lightbulb {
+  //   @include absoluteCenter;
+  //   cursor: pointer;
+  // }
 
   //  Menu list - right part of the navbar
 
@@ -106,7 +106,7 @@
       margin-right: 2.5rem;
     }
   }
-
+  // Menu list link
   &__link {
     display: inline-block;
     font-size: $font-l;
@@ -118,159 +118,313 @@
       border-bottom: 0.5rem solid $color-bgd-offset;
     }
   }
-
+  // Ordinal numbers in menu list
   &__link-ordinal {
     font-size: $font-l;
     font-weight: bold;
     margin-right: 1rem;
   }
-
+  // Hide hamburger menu on screens larger than 900px
   &__hamburger {
     display: none;
   }
-}
+  // media queries
+  @include respond(phone) {
+    & {
+      width: 93%;
+      // Hide horizontal menu when breakpoint is reached
+      &__ul {
+        display: none;
+      }
+      // Show hamburger menu when breakpoint is reached
+      &__hamburger {
+        display: block;
+        position: relative;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background: $color-bgd-offset;
 
-@media (max-width: 900px) {
-  .header {
-    &__ul {
-      display: none;
-    }
+        // Checkbox hack styles
+        .navigation {
+          &__checkbox {
+            display: none;
 
-    &__hamburger {
-      display: block;
-      position: relative;
-      width: 5rem;
-      height: 5rem;
-      border-radius: 50%;
-      background: $color-bgd-offset;
+            &:checked ~ .navigation__background {
+              transform: scale(80);
+            }
+            &:checked ~ .navigation__nav {
+              height: 100vh;
+              width: 100vw;
+              opacity: 1;
+              z-index: 1500;
+            }
 
-      .navigation {
-        &__checkbox {
-          display: none;
-
-          &:checked ~ .navigation__background {
-            transform: scale(80);
+            &:checked + .navigation__button .navigation__icon {
+              background-color: transparent;
+            }
+            &:checked + .navigation__button .navigation__icon::before {
+              top: 0;
+              transform: rotate(135deg);
+            }
+            &:checked + .navigation__button .navigation__icon::after {
+              top: 0;
+              transform: rotate(-135deg);
+            }
+            // add fixed position to menu ???
           }
-          &:checked ~ .navigation__nav {
-            height: 100vh;
-            width: 100vw;
-            opacity: 1;
-            z-index: 1500;
-          }
+          &__button {
+            background-color: $color-bgd-offset;
+            height: 5rem;
+            width: 5rem;
+            border-radius: 50%;
+            @include absoluteCenter;
 
-          &:checked + .navigation__button .navigation__icon {
-            background-color: transparent;
+            z-index: 2000;
+            text-align: center;
+            cursor: pointer;
+
+            &:hover .navigation__icon::before {
+              top: -1rem;
+            }
+            &:hover .navigation__icon::after {
+              top: 1rem;
+            }
           }
-          &:checked + .navigation__button .navigation__icon::before {
+          &__background {
+            height: 4rem;
+            width: 4rem;
+            border-radius: 50%;
+            @include absoluteCenter;
+
+            background-color: $color-black;
+            z-index: 1000;
+
+            transition: transform 0.4s ease-in;
+          }
+          &__nav {
+            position: fixed;
             top: 0;
-            transform: rotate(135deg);
-          }
-          &:checked + .navigation__button .navigation__icon::after {
-            top: 0;
-            transform: rotate(-135deg);
-          }
-          // add fixed position to menu ???
-        }
-        &__button {
-          background-color: $color-bgd-offset;
-          height: 5rem;
-          width: 5rem;
-          border-radius: 50%;
-          @include absoluteCenter;
-
-          z-index: 2000;
-          text-align: center;
-          cursor: pointer;
-
-          &:hover .navigation__icon::before {
-            top: -1rem;
-          }
-          &:hover .navigation__icon::after {
-            top: 1rem;
-          }
-        }
-        &__background {
-          height: 4rem;
-          width: 4rem;
-          border-radius: 50%;
-          @include absoluteCenter;
-
-          background-color: $color-black;
-          z-index: 1000;
-
-          transition: transform 0.4s ease-in;
-        }
-        &__nav {
-          position: fixed;
-          top: 0;
-          left: 0;
-          z-index: -1500;
-          height: 0;
-          width: 0;
-          opacity: 0;
-          transition: opacity 0.4s ease-in;
-        }
-
-        &__list {
-          @include absoluteCenter;
-          display: flex;
-          flex-direction: column;
-        }
-
-        &__link-container {
-          margin: 1rem 0;
-        }
-
-        &__link {
-          &:link,
-          &:visited {
-            color: $color-text;
-            display: inline-block;
-            font-size: $font-menu;
-            padding-bottom: 0.5rem;
-            border-bottom: 0.5rem solid $color-bgd-offset;
-            transition: border 0.25s;
-          }
-
-          &:hover,
-          &:active {
-            border-bottom: 0.5rem solid $color-primary;
-          }
-        }
-
-        &__link-ordinal {
-          color: $color-text;
-          font-size: $font-menu;
-          font-weight: bold;
-          margin-right: 2rem;
-        }
-
-        &__icon {
-          position: relative;
-          margin-top: 2.3rem;
-
-          &,
-          &::before,
-          &::after {
-            width: 2.75rem;
-            height: 2px;
-            background-color: $color-text;
-            display: inline-block;
-            border-radius: 10rem;
-          }
-
-          &::before,
-          &::after {
-            content: '';
-            position: absolute;
             left: 0;
-            transition: all 0.2s;
+            z-index: -1500;
+            height: 0;
+            width: 0;
+            opacity: 0;
+            transition: opacity 0.4s ease-in;
           }
-          &::before {
-            top: -0.8rem;
+
+          &__list {
+            @include absoluteCenter;
+            display: flex;
+            flex-direction: column;
           }
-          &::after {
-            top: 0.8rem;
+
+          &__link-container {
+            margin: 1rem 0;
+          }
+
+          &__link {
+            &:link,
+            &:visited {
+              color: $color-text;
+              display: inline-block;
+              font-size: $font-menu;
+              padding-bottom: 0.5rem;
+              border-bottom: 0.5rem solid $color-bgd-offset;
+              transition: border 0.25s;
+            }
+
+            &:hover,
+            &:active {
+              border-bottom: 0.5rem solid $color-primary;
+            }
+          }
+
+          &__link-ordinal {
+            color: $color-text;
+            font-size: $font-menu;
+            font-weight: bold;
+            margin-right: 2rem;
+          }
+
+          &__icon {
+            position: relative;
+            margin-top: 2.3rem;
+
+            &,
+            &::before,
+            &::after {
+              width: 2.75rem;
+              height: 2px;
+              background-color: $color-text;
+              display: inline-block;
+              border-radius: 10rem;
+            }
+
+            &::before,
+            &::after {
+              content: '';
+              position: absolute;
+              left: 0;
+              transition: all 0.2s;
+            }
+            &::before {
+              top: -0.8rem;
+            }
+            &::after {
+              top: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include respond(tab-p) {
+    & {
+      width: 90%;
+      // Hide horizontal menu when breakpoint is reached
+      &__ul {
+        display: none;
+      }
+      // Show hamburger menu when breakpoint is reached
+      &__hamburger {
+        display: block;
+        position: relative;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background: $color-bgd-offset;
+
+        // Checkbox hack styles
+        .navigation {
+          &__checkbox {
+            display: none;
+
+            &:checked ~ .navigation__background {
+              transform: scale(80);
+            }
+            &:checked ~ .navigation__nav {
+              height: 100vh;
+              width: 100vw;
+              opacity: 1;
+              z-index: 1500;
+            }
+
+            &:checked + .navigation__button .navigation__icon {
+              background-color: transparent;
+            }
+            &:checked + .navigation__button .navigation__icon::before {
+              top: 0;
+              transform: rotate(135deg);
+            }
+            &:checked + .navigation__button .navigation__icon::after {
+              top: 0;
+              transform: rotate(-135deg);
+            }
+            // add fixed position to menu ???
+          }
+          &__button {
+            background-color: $color-bgd-offset;
+            height: 5rem;
+            width: 5rem;
+            border-radius: 50%;
+            @include absoluteCenter;
+
+            z-index: 2000;
+            text-align: center;
+            cursor: pointer;
+
+            &:hover .navigation__icon::before {
+              top: -1rem;
+            }
+            &:hover .navigation__icon::after {
+              top: 1rem;
+            }
+          }
+          &__background {
+            height: 4rem;
+            width: 4rem;
+            border-radius: 50%;
+            @include absoluteCenter;
+
+            background-color: $color-black;
+            z-index: 1000;
+
+            transition: transform 0.4s ease-in;
+          }
+          &__nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1500;
+            height: 0;
+            width: 0;
+            opacity: 0;
+            transition: opacity 0.4s ease-in;
+          }
+
+          &__list {
+            @include absoluteCenter;
+            display: flex;
+            flex-direction: column;
+          }
+
+          &__link-container {
+            margin: 1rem 0;
+          }
+
+          &__link {
+            &:link,
+            &:visited {
+              color: $color-text;
+              display: inline-block;
+              font-size: $font-menu;
+              padding-bottom: 0.5rem;
+              border-bottom: 0.5rem solid $color-bgd-offset;
+              transition: border 0.25s;
+            }
+
+            &:hover,
+            &:active {
+              border-bottom: 0.5rem solid $color-primary;
+            }
+          }
+
+          &__link-ordinal {
+            color: $color-text;
+            font-size: $font-menu;
+            font-weight: bold;
+            margin-right: 2rem;
+          }
+
+          &__icon {
+            position: relative;
+            margin-top: 2.3rem;
+
+            &,
+            &::before,
+            &::after {
+              width: 2.75rem;
+              height: 2px;
+              background-color: $color-text;
+              display: inline-block;
+              border-radius: 10rem;
+            }
+
+            &::before,
+            &::after {
+              content: '';
+              position: absolute;
+              left: 0;
+              transition: all 0.2s;
+            }
+            &::before {
+              top: -0.8rem;
+            }
+            &::after {
+              top: 0.8rem;
+            }
           }
         }
       }
