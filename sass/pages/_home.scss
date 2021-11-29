@@ -45,8 +45,14 @@
   }
 
   @include respond(phone) {
-    &__image {
-      display: none;
+    & {
+      flex-direction: column;
+    }
+  }
+
+  @include respond(tab-p) {
+    & {
+      flex-direction: column;
     }
   }
 }

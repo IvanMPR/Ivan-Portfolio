@@ -154,10 +154,7 @@
               transform: scale(80);
             }
             &:checked ~ .navigation__nav {
-              height: 100vh;
-              width: 100vw;
-              opacity: 1;
-              z-index: 1500;
+              left: 0;
             }
 
             &:checked + .navigation__button .navigation__icon {
@@ -192,25 +189,25 @@
             }
           }
           &__background {
+            @include absoluteCenter;
             height: 4rem;
             width: 4rem;
             border-radius: 50%;
-            @include absoluteCenter;
-
             background-color: $color-black;
             z-index: 1000;
 
             transition: transform 0.4s ease-in;
           }
+
           &__nav {
             position: fixed;
             top: 0;
-            left: 0;
-            z-index: -1500;
-            height: 0;
-            width: 0;
-            opacity: 0;
-            transition: opacity 0.4s ease-in;
+            left: -100%;
+            z-index: 1500;
+            height: 100vh;
+            width: 100vw;
+
+            transition: all 0.4s cubic-bezier(0.81, 0.48, 0.54, 1.49);
           }
 
           &__list {
@@ -279,7 +276,6 @@
       }
     }
   }
-
   @include respond(tab-p) {
     & {
       width: 90%;
@@ -305,10 +301,7 @@
               transform: scale(80);
             }
             &:checked ~ .navigation__nav {
-              height: 100vh;
-              width: 100vw;
-              opacity: 1;
-              z-index: 1500;
+              left: 0;
             }
 
             &:checked + .navigation__button .navigation__icon {
@@ -343,25 +336,25 @@
             }
           }
           &__background {
+            @include absoluteCenter;
             height: 4rem;
             width: 4rem;
             border-radius: 50%;
-            @include absoluteCenter;
-
             background-color: $color-black;
             z-index: 1000;
 
             transition: transform 0.4s ease-in;
           }
+
           &__nav {
             position: fixed;
             top: 0;
-            left: 0;
-            z-index: -1500;
-            height: 0;
-            width: 0;
-            opacity: 0;
-            transition: opacity 0.4s ease-in;
+            left: -100%;
+            z-index: 1500;
+            height: 100vh;
+            width: 100vw;
+
+            transition: all 0.4s cubic-bezier(0.81, 0.48, 0.54, 1.49);
           }
 
           &__list {

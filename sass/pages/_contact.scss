@@ -2,7 +2,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+
+  &__icon {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  &__state {
+    font-size: $font-normal;
+  }
 }
 
 .phone {
@@ -32,7 +51,7 @@
   }
 
   &__info {
-    font-size: $font-l;
+    font-size: $font-normal;
     color: $color-text;
     letter-spacing: 2px;
     display: flex;
@@ -56,15 +75,15 @@
     }
 
     &--data {
-      font-size: $font-xl;
+      font-size: $font-l;
     }
     // @media
     @include respond(phone) {
       & {
-        font-size: $font-normal;
+        font-size: $font-small;
 
         &--data {
-          font-size: $font-l;
+          font-size: $font-normal;
         }
       }
     }

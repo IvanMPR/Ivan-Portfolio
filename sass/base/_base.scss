@@ -10,19 +10,27 @@ html {
   font-size: 62.5%;
 
   @include respond(phone) {
-    font-size: 45%;
+    & {
+      font-size: 45%;
+    }
   }
 
   @include respond(tab-p) {
-    font-size: 50%;
+    & {
+      font-size: 50%;
+    }
   }
 
   @include respond(tab-l) {
-    font-size: 60%;
+    & {
+      font-size: 60%;
+    }
   }
 
   @include respond(big-desk) {
-    font-size: 65%;
+    & {
+      font-size: 65%;
+    }
   }
 }
 
