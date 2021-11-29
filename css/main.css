@@ -1122,14 +1122,14 @@ body {
 
 @media (min-width: 37.51em) and (max-width: 56.25em) {
   .form {
-    width: 90%;
+    width: 80%;
     margin: 0 auto 2.5rem;
   }
 }
 
 @media (min-width: 56.26em) and (max-width: 75em) {
   .form {
-    width: 70%;
+    width: 60%;
     margin: 0 auto 3rem;
   }
 }
