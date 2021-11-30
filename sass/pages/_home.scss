@@ -48,11 +48,30 @@
     & {
       flex-direction: column;
     }
+    &__image {
+      width: 40rem;
+      height: 40rem;
+
+      &--inner {
+        width: 40rem;
+        height: 40rem;
+      }
+    }
   }
 
   @include respond(tab-p) {
     & {
       flex-direction: column;
+    }
+
+    &__image {
+      width: 42rem;
+      height: 42rem;
+
+      &--inner {
+        width: 42rem;
+        height: 42rem;
+      }
     }
   }
 }

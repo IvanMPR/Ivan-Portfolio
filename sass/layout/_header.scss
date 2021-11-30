@@ -131,7 +131,7 @@
   // media queries
   @include respond(phone) {
     & {
-      width: 93%;
+      // width: 93%;
       // Hide horizontal menu when breakpoint is reached
       &__ul {
         display: none;
@@ -278,7 +278,7 @@
   }
   @include respond(tab-p) {
     & {
-      width: 90%;
+      // width: 90%;
       // Hide horizontal menu when breakpoint is reached
       &__ul {
         display: none;
@@ -354,7 +354,7 @@
             height: 100vh;
             width: 100vw;
 
-            transition: all 0.4s cubic-bezier(0.81, 0.48, 0.54, 1.49);
+            transition: all 0.4s cubic-bezier(0.17, 0.67, 0.81, 1.2);
           }
 
           &__list {

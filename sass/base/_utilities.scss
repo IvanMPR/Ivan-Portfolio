@@ -47,6 +47,17 @@
   padding: 1rem;
   max-width: 120rem;
   margin: auto;
+
+  @include respond(phone) {
+    & {
+      padding: 1rem 2rem;
+    }
+  }
+  @include respond(tab-p) {
+    & {
+      padding: 1rem 1.5rem;
+    }
+  }
 }
 .text-container {
   padding: 1rem;

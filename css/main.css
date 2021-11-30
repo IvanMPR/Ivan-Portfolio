@@ -380,6 +380,18 @@ body {
   margin: auto;
 }
 
+@media (max-width: 37.5em) {
+  .container {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (min-width: 37.51em) and (max-width: 56.25em) {
+  .container {
+    padding: 1rem 1.5rem;
+  }
+}
+
 .text-container {
   padding: 1rem;
   max-width: 72rem;
@@ -589,9 +601,6 @@ body {
 }
 
 @media (max-width: 37.5em) {
-  .header {
-    width: 93%;
-  }
   .header__ul {
     display: none;
   }
@@ -734,9 +743,6 @@ body {
 }
 
 @media (min-width: 37.51em) and (max-width: 56.25em) {
-  .header {
-    width: 90%;
-  }
   .header__ul {
     display: none;
   }
@@ -814,8 +820,8 @@ body {
     z-index: 1500;
     height: 100vh;
     width: 100vw;
-    -webkit-transition: all 0.4s cubic-bezier(0.81, 0.48, 0.54, 1.49);
-    transition: all 0.4s cubic-bezier(0.81, 0.48, 0.54, 1.49);
+    -webkit-transition: all 0.4s cubic-bezier(0.17, 0.67, 0.81, 1.2);
+    transition: all 0.4s cubic-bezier(0.17, 0.67, 0.81, 1.2);
   }
   .header__hamburger .navigation__list {
     position: absolute;
@@ -1197,6 +1203,14 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .main__image {
+    width: 40rem;
+    height: 40rem;
+  }
+  .main__image--inner {
+    width: 40rem;
+    height: 40rem;
+  }
 }
 
 @media (min-width: 37.51em) and (max-width: 56.25em) {
@@ -1205,6 +1219,14 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .main__image {
+    width: 42rem;
+    height: 42rem;
+  }
+  .main__image--inner {
+    width: 42rem;
+    height: 42rem;
   }
 }
 
