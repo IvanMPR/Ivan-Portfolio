@@ -53,10 +53,4 @@
       flex-direction: column-reverse;
     }
   }
-  @include respond(tab-p) {
-    &__upper {
-      // display: flex;
-      flex-direction: column-reverse;
-    }
-  }
 }

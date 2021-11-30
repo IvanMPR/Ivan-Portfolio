@@ -47,10 +47,16 @@
   @include respond(phone) {
     & {
       flex-direction: column;
+      margin-bottom: 5rem;
     }
+    &__h1 {
+      margin-bottom: 4rem;
+    }
+
     &__image {
       width: 40rem;
       height: 40rem;
+      align-self: flex-start;
 
       &--inner {
         width: 40rem;
@@ -62,11 +68,17 @@
   @include respond(tab-p) {
     & {
       flex-direction: column;
+      margin-bottom: 7rem;
+    }
+
+    &__h1 {
+      margin-bottom: 6rem;
     }
 
     &__image {
       width: 42rem;
       height: 42rem;
+      align-self: flex-start;
 
       &--inner {
         width: 42rem;
