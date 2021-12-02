@@ -1,14 +1,129 @@
-.section__about {
-  background: cornflowerblue;
-  // min-height: 48rem;
+.section__about--subheadings {
+  // background: crimson;
+
   display: flex;
 
-  &--subheadings {
-    //  background: crimson;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  justify-content: space-around;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+
+  @include respond(phone) {
+    & {
+      flex-direction: column;
+      width: 40%;
+    }
+
+    .section__subtitle {
+      margin-bottom: 3rem;
+      // width: 50%;
+    }
+  }
+}
+
+.section__about {
+  // background: cornflowerblue;
+  position: relative;
+  height: 100rem;
+  // align-items: top;
+
+  .about__skills {
+    // background: orchid;
+    z-index: 150;
+
+    .skill-icon {
+      display: inline-block;
+
+      &-svg {
+        width: 3.3rem;
+      }
+    }
+
+    &--html,
+    &--css,
+    &--js,
+    &--sass,
+    &--ai {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 5rem;
+    }
+
+    .skill-bar {
+      width: 70%;
+      height: 1rem;
+      background: $color-bgd-offset;
+      display: flex;
+      align-items: center;
+
+      &-inner {
+        width: 80%;
+        height: 0.5rem;
+        background: $color-primary;
+      }
+    }
+  }
+  .about__personal {
+    display: none;
+    // background: orangered;
+    z-index: 100;
+  }
+
+  .about__skills,
+  .about__personal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 70%;
-    margin: auto;
+
+    // min-height: 30rem;
+  }
+
+  .courses-certificates {
+    // background: cornsilk;
+    padding-top: 5rem;
+
+    .courses-intro {
+      line-height: 1.6;
+      font-size: $font-normal;
+      text-align: justify;
+      color: $color-text-offset;
+      margin-bottom: 3rem;
+    }
+
+    .certificates {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      &-container {
+        width: 35rem;
+        height: 30rem;
+        background: red;
+
+        .img-cert {
+          // width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .cc {
+    font-size: 2rem;
+    color: $color-text;
+    text-align: center;
+    // width: 28%;
+    margin: 0 auto 4rem;
+    font-weight: 400;
+
+    &-icon {
+      margin-right: 2rem;
+    }
   }
 }
