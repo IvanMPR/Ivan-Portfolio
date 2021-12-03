@@ -308,11 +308,9 @@ body {
 
 .section__subtitle {
   text-align: center;
-  color: #ffffff;
-  font-size: 2rem;
+  color: #818a91;
+  font-size: 1.6rem;
   font-weight: 400;
-  padding-bottom: 1rem;
-  border-bottom: 0.5rem solid #0e141b;
   cursor: pointer;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -320,19 +318,24 @@ body {
 
 .section__subtitle:hover {
   color: #ffffff;
-  border-bottom: 0.5rem solid #252526;
+}
+
+.section__subtitle:hover .section__subtitle--icon {
+  color: #ffffff;
 }
 
 .section__subtitle--icon {
-  color: #ffffff;
+  color: #818a91;
   margin-right: 1rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .active {
   border-bottom: 0.5rem solid #ff335f !important;
 }
 
-.light {
+.h3-active {
   color: #ffffff;
 }
 
@@ -954,16 +957,26 @@ body {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.section__about {
+  position: relative;
+}
+
 .section__about--subheadings {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 3rem;
+  margin: 3rem auto 5rem;
 }
 
 @media (max-width: 37.5em) {
@@ -979,13 +992,14 @@ body {
   }
 }
 
-.section__about {
-  position: relative;
-  height: 100rem;
+.section__about .about__skills,
+.section__about .about__personal {
+  width: 70%;
 }
 
 .section__about .about__skills {
-  z-index: 150;
+  border-top: 1px solid #818a91;
+  padding-top: 5rem;
 }
 
 .section__about .about__skills .skill-icon {
@@ -1029,18 +1043,7 @@ body {
 }
 
 .section__about .about__personal {
-  display: none;
-  z-index: 100;
-}
-
-.section__about .about__skills,
-.section__about .about__personal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 70%;
+  display: block;
 }
 
 .section__about .courses-certificates {
@@ -1558,5 +1561,11 @@ body {
 
 .fa-map-marker-alt {
   color: #ff335f;
+}
+
+.fa-user-cog,
+.fa-user-circle {
+  display: inline-block;
+  margin-right: 1rem;
 }
 /*# sourceMappingURL=main.css.map */

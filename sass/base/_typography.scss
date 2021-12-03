@@ -19,21 +19,29 @@ body {
 // h3
 .section__subtitle {
   text-align: center;
-  color: $color-text;
-  font-size: $font-l;
+  color: $color-text-offset;
+  font-size: $font-normal;
   font-weight: 400;
-  padding-bottom: 1rem;
-  border-bottom: 0.5rem solid $color-bgd;
+  // padding-bottom: 1rem;
+  // border-bottom: 0.5rem solid $color-bgd;
   cursor: pointer;
   transition: all 0.2s;
 
+  // &:hover {
+  //   color: $color-text;
+  //   border-bottom: 0.5rem solid $color-bgd-offset;
+  // }
   &:hover {
     color: $color-text;
-    border-bottom: 0.5rem solid $color-bgd-offset;
+  }
+
+  &:hover &--icon {
+    color: $color-text;
   }
 
   &--icon {
-    color: $color-text;
+    color: $color-text-offset;
     margin-right: 1rem;
+    transition: all 0.2s;
   }
 }

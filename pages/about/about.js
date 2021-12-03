@@ -5,7 +5,7 @@ const sectionTogglers = document.querySelectorAll('.section__subtitle');
 
 sectionTogglers.forEach(function (h3) {
   h3.addEventListener('click', function (e) {
-    sectionTogglers.forEach(toggler => toggler.classList.remove('active'));
-    this.classList.add('active');
+    sectionTogglers.forEach(toggler => toggler.classList.remove('h3-active'));
+    this.classList.add('h3-active');
   });
 });
