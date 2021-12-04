@@ -560,7 +560,7 @@ body {
 
 .header__logo--name {
   margin: 0 0 0 1.5rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 400;
   color: #ffffff;
 }
@@ -582,7 +582,7 @@ body {
 
 .header__link {
   display: inline-block;
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding-bottom: 0.5rem;
   border-bottom: 0.5rem solid #0e141b;
   -webkit-transition: border 0.25s;
@@ -594,7 +594,7 @@ body {
 }
 
 .header__link-ordinal {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: bold;
   margin-right: 1rem;
 }
