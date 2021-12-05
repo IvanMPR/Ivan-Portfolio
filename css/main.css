@@ -219,6 +219,24 @@
   }
 }
 
+@-webkit-keyframes bgdMove {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+@keyframes bgdMove {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
 *,
 *::after,
 *::before {
@@ -297,7 +315,7 @@ body {
 .section__title {
   text-align: center;
   color: #ffffff;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 400;
 }
 
@@ -415,20 +433,15 @@ body {
           flex-direction: column;
 }
 
-.dark-contrast {
-  background: rgba(14, 20, 27, 0.8) !important;
-}
-
-.dark-contrast a,
-.dark-contrast p {
-  color: #ffffff !important;
-  font-weight: 400 !important;
-}
-
 /* ///////////////////////////// */
 .scale-up {
   -webkit-animation: scaleUp 1s ease-out 1 forwards;
           animation: scaleUp 1s ease-out 1 forwards;
+}
+
+.skills-bar-animation {
+  -webkit-animation: bgdMove 0.25s linear 2 alternate;
+          animation: bgdMove 0.25s linear 2 alternate;
 }
 
 .btn {
@@ -998,7 +1011,6 @@ html {
 }
 
 .section__about .about__skills {
-  border-top: 1px solid #818a91;
   padding-top: 5rem;
 }
 
@@ -1008,6 +1020,16 @@ html {
 
 .section__about .about__skills .skill-icon-svg {
   width: 3.3rem;
+}
+
+.section__about .about__skills--html {
+  padding-top: 3rem;
+  border-top: 1px solid #818a91;
+}
+
+.section__about .about__skills--ai {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #818a91;
 }
 
 .section__about .about__skills--html, .section__about .about__skills--css, .section__about .about__skills--js, .section__about .about__skills--sass, .section__about .about__skills--ai {
@@ -1039,7 +1061,9 @@ html {
 .section__about .about__skills .skill-bar-inner {
   width: 80%;
   height: 0.5rem;
-  background: #ff335f;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff335f), to(#43a9a3));
+  background-image: linear-gradient(to right, #ff335f, #43a9a3);
+  background-size: 400%;
 }
 
 .section__about .about__personal {
@@ -1085,7 +1109,7 @@ html {
 }
 
 .section__about .cc {
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: #ffffff;
   text-align: center;
   margin: 0 auto 4rem;
@@ -1093,7 +1117,7 @@ html {
 }
 
 .section__about .cc-icon {
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 .section-contact {

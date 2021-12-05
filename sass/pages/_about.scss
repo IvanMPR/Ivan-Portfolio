@@ -33,7 +33,7 @@ html {
   }
 
   .about__skills {
-    border-top: 1px solid $color-text-offset;
+    // border-top: 1px solid $color-text-offset;
     padding-top: 5rem;
     .skill-icon {
       display: inline-block;
@@ -41,6 +41,15 @@ html {
       &-svg {
         width: 3.3rem;
       }
+    }
+
+    &--html {
+      padding-top: 3rem;
+      border-top: 1px solid $color-text-offset;
+    }
+    &--ai {
+      padding-bottom: 3rem;
+      border-bottom: 1px solid $color-text-offset;
     }
 
     &--html,
@@ -65,7 +74,13 @@ html {
       &-inner {
         width: 80%;
         height: 0.5rem;
-        background: $color-primary;
+        // background: $color-primary;
+        background-image: linear-gradient(
+          to right,
+          $color-primary,
+          $color-secondary
+        );
+        background-size: 400%;
       }
     }
   }
@@ -104,14 +119,14 @@ html {
   }
 
   .cc {
-    font-size: $font-l;
+    font-size: $font-normal;
     color: $color-text;
     text-align: center;
     margin: 0 auto 4rem;
     font-weight: 400;
 
     &-icon {
-      margin-right: 2rem;
+      margin-right: 1rem;
     }
   }
 }

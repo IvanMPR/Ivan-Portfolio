@@ -87,15 +87,6 @@
   // }
 }
 
-.dark-contrast {
-  background: rgba($color-bgd, $alpha: 0.8) !important;
-  & a,
-  p {
-    color: $color-text !important;
-    font-weight: 400 !important;
-  }
-}
-
 /* ///////////////////////////// */
 .scale-up {
   animation: scaleUp 1s ease-out 1 forwards;
@@ -104,3 +95,6 @@
 // .scale-down {
 //   animation: scaleDown 1s ease-out forwards;
 // }
+.skills-bar-animation {
+  animation: bgdMove 0.25s linear 2 alternate;
+}
