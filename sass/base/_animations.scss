@@ -98,7 +98,8 @@
 }
 
 @keyframes bgdMove {
-  0% {
+  0%,
+  90% {
     background-position: left;
   }
   100% {

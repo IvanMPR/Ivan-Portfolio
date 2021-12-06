@@ -220,7 +220,8 @@
 }
 
 @-webkit-keyframes bgdMove {
-  0% {
+  0%,
+  90% {
     background-position: left;
   }
   100% {
@@ -229,7 +230,8 @@
 }
 
 @keyframes bgdMove {
-  0% {
+  0%,
+  90% {
     background-position: left;
   }
   100% {
@@ -440,8 +442,8 @@ body {
 }
 
 .skills-bar-animation {
-  -webkit-animation: bgdMove 0.25s linear 2 alternate;
-          animation: bgdMove 0.25s linear 2 alternate;
+  -webkit-animation: bgdMove 2s linear infinite alternate;
+          animation: bgdMove 2s linear infinite alternate;
 }
 
 .btn {
@@ -985,24 +987,10 @@ html {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 70%;
   margin: 3rem auto 5rem;
-}
-
-@media (max-width: 37.5em) {
-  .section__about--subheadings {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 40%;
-  }
-  .section__about--subheadings .section__subtitle {
-    margin-bottom: 3rem;
-  }
 }
 
 .section__about .about__skills,
@@ -1020,6 +1008,26 @@ html {
 
 .section__about .about__skills .skill-icon-svg {
   width: 3.3rem;
+}
+
+.section__about .about__skills .inner-html {
+  width: 85%;
+}
+
+.section__about .about__skills .inner-css {
+  width: 85%;
+}
+
+.section__about .about__skills .inner-js {
+  width: 90%;
+}
+
+.section__about .about__skills .inner-sass {
+  width: 80%;
+}
+
+.section__about .about__skills .inner-ai {
+  width: 95%;
 }
 
 .section__about .about__skills--html {
@@ -1059,22 +1067,17 @@ html {
 }
 
 .section__about .about__skills .skill-bar-inner {
-  width: 80%;
   height: 0.5rem;
-  background-image: -webkit-gradient(linear, left top, right top, from(#ff335f), to(#43a9a3));
-  background-image: linear-gradient(to right, #ff335f, #43a9a3);
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff335f), to(#0e141b));
+  background-image: linear-gradient(to right, #ff335f, #0e141b);
   background-size: 400%;
 }
 
-.section__about .about__personal {
-  display: block;
-}
-
-.section__about .courses-certificates {
+.section__about .about__skills .courses-certificates {
   padding-top: 5rem;
 }
 
-.section__about .courses-certificates .courses-intro {
+.section__about .about__skills .courses-certificates .courses-intro {
   line-height: 1.6;
   font-size: 1.6rem;
   text-align: justify;
@@ -1082,7 +1085,8 @@ html {
   margin-bottom: 3rem;
 }
 
-.section__about .courses-certificates .certificates {
+.section__about .about__skills .courses-certificates .certificates {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1093,19 +1097,22 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  gap: 1rem;
 }
 
-.section__about .courses-certificates .certificates-container {
-  width: 35rem;
-  height: 30rem;
-  background: red;
+.section__about .about__skills .courses-certificates .certificates .cert-wrapper {
+  width: 50%;
 }
 
-.section__about .courses-certificates .certificates-container .img-cert {
-  height: 100%;
+.section__about .about__skills .courses-certificates .certificates .cert-wrapper-img {
+  width: 100%;
+}
+
+.section__about .about__personal {
+  display: block;
+  width: 70%;
+  margin: 3rem auto 5rem;
+  border-top: 1px solid #818a91;
 }
 
 .section__about .cc {
@@ -1118,6 +1125,30 @@ html {
 
 .section__about .cc-icon {
   margin-right: 1rem;
+}
+
+@media (max-width: 37.5em) {
+  .section__about--subheadings {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 40%;
+  }
+  .section__about .section__subtitle {
+    margin-bottom: 3rem;
+  }
+  .section__about .about__skills,
+  .section__about .about__personal {
+    width: 95%;
+  }
+}
+
+@media (min-width: 37.51em) and (max-width: 56.25em) {
+  .section__about .about__skills,
+  .section__about .about__personal {
+    width: 85%;
+  }
 }
 
 .section-contact {

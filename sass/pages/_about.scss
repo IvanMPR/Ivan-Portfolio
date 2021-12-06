@@ -1,30 +1,16 @@
 html {
   scroll-behavior: smooth;
 }
-// .section__title--about {
-//   // border-bottom: 2px solid $color-bgd-offset;
-// }
 
 .section__about {
   position: relative;
 
   &--subheadings {
     display: flex;
-
     align-items: flex-start;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 70%;
     margin: 3rem auto 5rem;
-
-    @include respond(phone) {
-      & {
-        flex-direction: column;
-        width: 40%;
-      }
-      .section__subtitle {
-        margin-bottom: 3rem;
-      }
-    }
   }
 
   .about__skills,
@@ -33,7 +19,6 @@ html {
   }
 
   .about__skills {
-    // border-top: 1px solid $color-text-offset;
     padding-top: 5rem;
     .skill-icon {
       display: inline-block;
@@ -41,6 +26,22 @@ html {
       &-svg {
         width: 3.3rem;
       }
+    }
+    // skill level bars
+    .inner-html {
+      width: 85%;
+    }
+    .inner-css {
+      width: 85%;
+    }
+    .inner-js {
+      width: 90%;
+    }
+    .inner-sass {
+      width: 80%;
+    }
+    .inner-ai {
+      width: 95%;
     }
 
     &--html {
@@ -72,50 +73,47 @@ html {
       align-items: center;
 
       &-inner {
-        width: 80%;
         height: 0.5rem;
         // background: $color-primary;
-        background-image: linear-gradient(
-          to right,
-          $color-primary,
-          $color-secondary
-        );
+        background-image: linear-gradient(to right, $color-primary, $color-bgd);
         background-size: 400%;
+      }
+    }
+
+    .courses-certificates {
+      padding-top: 5rem;
+
+      .courses-intro {
+        line-height: 1.6;
+        font-size: $font-normal;
+        text-align: justify;
+        color: $color-text-offset;
+        margin-bottom: 3rem;
+      }
+
+      .certificates {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        .cert-wrapper {
+          width: 50%;
+
+          &-img {
+            width: 100%;
+          }
+        }
       }
     }
   }
 
   .about__personal {
     display: block;
-  }
-
-  .courses-certificates {
-    padding-top: 5rem;
-
-    .courses-intro {
-      line-height: 1.6;
-      font-size: $font-normal;
-      text-align: justify;
-      color: $color-text-offset;
-      margin-bottom: 3rem;
-    }
-
-    .certificates {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-
-      &-container {
-        width: 35rem;
-        height: 30rem;
-        background: red;
-
-        .img-cert {
-          height: 100%;
-        }
-      }
-    }
+    width: 70%;
+    margin: 3rem auto 5rem;
+    border-top: 1px solid $color-text-offset;
   }
 
   .cc {
@@ -127,6 +125,35 @@ html {
 
     &-icon {
       margin-right: 1rem;
+    }
+  }
+
+  @include respond(phone) {
+    &--subheadings {
+      flex-direction: column;
+      width: 40%;
+    }
+    .section__subtitle {
+      margin-bottom: 3rem;
+    }
+
+    .about__skills,
+    .about__personal {
+      width: 95%;
+    }
+  }
+  @include respond(tab-p) {
+    // &--subheadings {
+    //   flex-direction: column;
+    //   width: 40%;
+    // }
+    // .section__subtitle {
+    //   margin-bottom: 3rem;
+    // }
+
+    .about__skills,
+    .about__personal {
+      width: 85%;
     }
   }
 }
