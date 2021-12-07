@@ -99,10 +99,38 @@ html {
         gap: 1rem;
 
         .cert-wrapper {
-          width: 50%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 1rem;
+          // background-color: cadetblue;
+
+          .course-title {
+            width: 50%;
+            font-size: $font-normal;
+            font-style: italic;
+            text-decoration: underline;
+
+            & a:link,
+            & a:visited {
+              color: $color-text-offset;
+              transition: color 0.2s;
+            }
+
+            & a:hover {
+              color: $color-text;
+            }
+          }
 
           &-img {
             width: 100%;
+            display: block;
+          }
+
+          &-link {
+            width: 50%;
+            display: block;
           }
         }
       }
@@ -140,6 +168,18 @@ html {
     .about__skills,
     .about__personal {
       width: 95%;
+    }
+
+    .cert-wrapper {
+      flex-direction: column;
+
+      &-img {
+        margin-bottom: 1rem;
+      }
+
+      .course-title {
+        margin-bottom: 1.5rem;
+      }
     }
   }
   @include respond(tab-p) {

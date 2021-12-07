@@ -1101,11 +1101,45 @@ html {
 }
 
 .section__about .about__skills .courses-certificates .certificates .cert-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.section__about .about__skills .courses-certificates .certificates .cert-wrapper .course-title {
   width: 50%;
+  font-size: 1.6rem;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.section__about .about__skills .courses-certificates .certificates .cert-wrapper .course-title a:link,
+.section__about .about__skills .courses-certificates .certificates .cert-wrapper .course-title a:visited {
+  color: #818a91;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.section__about .about__skills .courses-certificates .certificates .cert-wrapper .course-title a:hover {
+  color: #ffffff;
 }
 
 .section__about .about__skills .courses-certificates .certificates .cert-wrapper-img {
   width: 100%;
+  display: block;
+}
+
+.section__about .about__skills .courses-certificates .certificates .cert-wrapper-link {
+  width: 50%;
+  display: block;
 }
 
 .section__about .about__personal {
@@ -1141,6 +1175,18 @@ html {
   .section__about .about__skills,
   .section__about .about__personal {
     width: 95%;
+  }
+  .section__about .cert-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section__about .cert-wrapper-img {
+    margin-bottom: 1rem;
+  }
+  .section__about .cert-wrapper .course-title {
+    margin-bottom: 1.5rem;
   }
 }
 
