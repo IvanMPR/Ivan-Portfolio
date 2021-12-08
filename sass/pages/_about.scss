@@ -81,7 +81,7 @@ html {
     }
 
     .courses-certificates {
-      padding-top: 5rem;
+      // padding-top: 5rem;
 
       .courses-intro {
         line-height: 1.6;
@@ -111,6 +111,7 @@ html {
             font-size: $font-normal;
             font-style: italic;
             text-decoration: underline;
+            text-decoration-color: $color-text-offset;
 
             & a:link,
             & a:visited {
@@ -120,6 +121,7 @@ html {
 
             & a:hover {
               color: $color-text;
+              text-decoration-color: $color-text;
             }
           }
 
@@ -138,17 +140,38 @@ html {
   }
 
   .about__personal {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 70%;
     margin: 3rem auto 5rem;
     border-top: 1px solid $color-text-offset;
+
+    &--ul {
+      padding: 0;
+      margin: 0;
+
+      & li {
+        padding-left: 1rem;
+        text-indent: -0.7rem;
+        font-size: $font-normal;
+        color: $color-text-offset;
+        margin: 0.5rem 0;
+
+        &::before {
+          content: '• ';
+          color: $color-primary;
+        }
+      }
+    }
   }
 
   .cc {
     font-size: $font-normal;
     color: $color-text;
     text-align: center;
-    margin: 0 auto 4rem;
+    margin: 4rem auto;
     font-weight: 400;
 
     &-icon {
