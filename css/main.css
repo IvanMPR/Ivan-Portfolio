@@ -328,7 +328,7 @@ body {
 
 .section__subtitle {
   text-align: center;
-  color: #818a91;
+  color: #ffffff;
   font-size: 1.6rem;
   font-weight: 400;
   cursor: pointer;
@@ -336,19 +336,9 @@ body {
   transition: all 0.2s;
 }
 
-.section__subtitle:hover {
-  color: #ffffff;
-}
-
-.section__subtitle:hover .section__subtitle--icon {
-  color: #ffffff;
-}
-
 .section__subtitle--icon {
   color: #818a91;
   margin-right: 1rem;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
 }
 
 .active {
@@ -984,13 +974,14 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 70%;
-  margin: 3rem auto 5rem;
+  margin: 3rem auto 0;
 }
 
 .section__about .about__skills,
@@ -1192,14 +1183,14 @@ html {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 40%;
+    width: 100%;
   }
   .section__about .section__subtitle {
     margin-bottom: 3rem;
   }
   .section__about .about__skills,
   .section__about .about__personal {
-    width: 95%;
+    width: 100%;
   }
   .section__about .cert-wrapper {
     -webkit-box-orient: vertical;
@@ -1690,9 +1681,10 @@ html {
 }
 
 .fa-user-cog,
-.fa-user-circle {
+.fa-user-circle,
+.fa-address-card {
   display: inline-block;
-  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .fa-dot-circle,

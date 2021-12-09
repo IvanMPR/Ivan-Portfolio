@@ -7,10 +7,10 @@ html {
 
   &--subheadings {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
     width: 70%;
-    margin: 3rem auto 5rem;
+    margin: 3rem auto 0;
   }
 
   .about__skills,
@@ -183,7 +183,7 @@ html {
   @include respond(phone) {
     &--subheadings {
       flex-direction: column;
-      width: 40%;
+      width: 100%;
     }
     .section__subtitle {
       margin-bottom: 3rem;
@@ -191,7 +191,7 @@ html {
 
     .about__skills,
     .about__personal {
-      width: 95%;
+      width: 100%;
     }
 
     .cert-wrapper {

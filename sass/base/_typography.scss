@@ -19,7 +19,7 @@ body {
 // h3
 .section__subtitle {
   text-align: center;
-  color: $color-text-offset;
+  color: $color-text;
   font-size: $font-normal;
   font-weight: 400;
   // padding-bottom: 1rem;
@@ -31,17 +31,17 @@ body {
   //   color: $color-text;
   //   border-bottom: 0.5rem solid $color-bgd-offset;
   // }
-  &:hover {
-    color: $color-text;
-  }
+  // &:hover {
+  //   color: $color-text;
+  // }
 
-  &:hover &--icon {
-    color: $color-text;
-  }
+  // &:hover &--icon {
+  //   color: $color-text;
+  // }
 
   &--icon {
     color: $color-text-offset;
     margin-right: 1rem;
-    transition: all 0.2s;
+    // transition: all 0.2s;
   }
 }
