@@ -30,3 +30,10 @@
   display: inline-block;
   margin-right: 1rem;
 }
+
+.fa-dot-circle,
+.fa-circle {
+  font-size: $font-small;
+  margin-right: 2rem;
+  color: $color-text;
+}

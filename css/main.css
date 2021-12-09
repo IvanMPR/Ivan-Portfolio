@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
  0 - 600px: Phone
  600px - 900px: Tablet portrait
@@ -1116,21 +1115,17 @@ html {
   font-size: 1.6rem;
   font-style: italic;
   text-decoration: underline;
-  -webkit-text-decoration-color: #818a91;
-          text-decoration-color: #818a91;
+  -webkit-text-decoration-color: #ffffff;
+          text-decoration-color: #ffffff;
 }
 
 .section__about .about__skills .courses-certificates .certificates .cert-wrapper .course-title a:link,
 .section__about .about__skills .courses-certificates .certificates .cert-wrapper .course-title a:visited {
-  color: #818a91;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-}
-
-.section__about .about__skills .courses-certificates .certificates .cert-wrapper .course-title a:hover {
   color: #ffffff;
   -webkit-text-decoration-color: #ffffff;
           text-decoration-color: #ffffff;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
 .section__about .about__skills .courses-certificates .certificates .cert-wrapper-img {
@@ -1163,21 +1158,20 @@ html {
 }
 
 .section__about .about__personal--ul {
-  padding: 0;
-  margin: 0;
+  margin-left: 1rem;
+  list-style: disc;
 }
 
 .section__about .about__personal--ul li {
-  padding-left: 1rem;
-  text-indent: -0.7rem;
   font-size: 1.6rem;
   color: #818a91;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
+  text-align: justify;
 }
 
-.section__about .about__personal--ul li::before {
-  content: '• ';
-  color: #ff335f;
+.section__about .about__personal--ul li a {
+  text-decoration: underline;
+  font-style: italic;
 }
 
 .section__about .cc {
@@ -1699,5 +1693,12 @@ html {
 .fa-user-circle {
   display: inline-block;
   margin-right: 1rem;
+}
+
+.fa-dot-circle,
+.fa-circle {
+  font-size: 1.3rem;
+  margin-right: 2rem;
+  color: #ffffff;
 }
 /*# sourceMappingURL=main.css.map */

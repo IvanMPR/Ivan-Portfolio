@@ -111,18 +111,19 @@ html {
             font-size: $font-normal;
             font-style: italic;
             text-decoration: underline;
-            text-decoration-color: $color-text-offset;
+            text-decoration-color: $color-text;
 
             & a:link,
             & a:visited {
-              color: $color-text-offset;
+              color: $color-text;
+              text-decoration-color: $color-text;
               transition: color 0.2s;
             }
 
-            & a:hover {
-              color: $color-text;
-              text-decoration-color: $color-text;
-            }
+            // & a:hover {
+            //   color: $color-text;
+            //   text-decoration-color: $color-primary;
+            // }
           }
 
           &-img {
@@ -149,19 +150,19 @@ html {
     border-top: 1px solid $color-text-offset;
 
     &--ul {
-      padding: 0;
-      margin: 0;
-
+      margin-left: 1rem;
+      list-style: disc;
       & li {
-        padding-left: 1rem;
-        text-indent: -0.7rem;
+        // padding-left: 1rem;
+        // text-indent: -1rem;
         font-size: $font-normal;
         color: $color-text-offset;
-        margin: 0.5rem 0;
+        margin: 1rem 0;
+        text-align: justify;
 
-        &::before {
-          content: '• ';
-          color: $color-primary;
+        & a {
+          text-decoration: underline;
+          font-style: italic;
         }
       }
     }
