@@ -395,13 +395,13 @@ body {
 
 @media (max-width: 37.5em) {
   .container {
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
   }
 }
 
 @media (min-width: 37.51em) and (max-width: 56.25em) {
   .container {
-    padding: 1rem 1.5rem;
+    padding: 1rem 2rem;
   }
 }
 

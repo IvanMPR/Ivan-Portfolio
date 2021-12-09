@@ -54,12 +54,12 @@
 
   @include respond(phone) {
     & {
-      padding: 1rem 2rem;
+      padding: 1rem 1.5rem;
     }
   }
   @include respond(tab-p) {
     & {
-      padding: 1rem 1.5rem;
+      padding: 1rem 2rem;
     }
   }
 }
