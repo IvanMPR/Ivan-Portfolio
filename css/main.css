@@ -528,13 +528,14 @@ body {
   -moz-perspective: 150rem;
   cursor: pointer;
   border-radius: 50%;
-  outline-offset: 0.3rem;
 }
 
 .header__logo--front-image, .header__logo--back-image {
   position: absolute;
   top: 0;
   left: 0;
+  width: 5rem;
+  height: 5rem;
   width: 100%;
   height: 100%;
   border-radius: 50%;
