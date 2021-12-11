@@ -558,7 +558,7 @@ body {
 }
 
 .header__logo--back-image {
-  background: url(../../img/bg_self.jpeg) no-repeat center center/cover;
+  background: url(.././img/bg_self.jpeg) no-repeat center center/cover;
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
   z-index: 1999;
@@ -1431,7 +1431,7 @@ html {
   height: 45rem;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   background-color: #fff;
-  background-image: url("../../img/Selfie.jpeg");
+  background-image: url(".././img/Selfie.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
