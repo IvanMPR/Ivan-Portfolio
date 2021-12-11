@@ -15,7 +15,7 @@ html {
 
   .about__skills,
   .about__personal {
-    width: 70%;
+    width: 100%;
   }
 
   .about__skills {
@@ -145,7 +145,7 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 70%;
+    width: 100%;
     margin: 3rem auto 5rem;
     border-top: 1px solid $color-text-offset;
 
