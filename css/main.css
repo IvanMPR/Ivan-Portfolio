@@ -548,7 +548,7 @@ body {
 }
 
 .header__logo--front-image {
-  background: url(../../img/IvanEmojiCroped.png) no-repeat center center/cover;
+  background: url(.././img/IvanEmojiCroped.png) no-repeat center center/cover;
   z-index: 2000;
 }
 
