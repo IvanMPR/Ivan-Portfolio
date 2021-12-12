@@ -24,7 +24,7 @@ body {
   font-weight: 400;
   // padding-bottom: 1rem;
   // border-bottom: 0.5rem solid $color-bgd;
-  cursor: pointer;
+  // cursor: pointer;
   transition: all 0.2s;
 
   // &:hover {
@@ -40,7 +40,7 @@ body {
   // }
 
   &--icon {
-    color: $color-text-offset;
+    color: $color-text;
     margin-right: 1rem;
     // transition: all 0.2s;
   }
