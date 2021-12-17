@@ -2,13 +2,14 @@
   // width: 70%;
   // margin: auto;
   // text-align: center;
-  background-color: thistle;
+  // background-color: thistle;
 
   &__para {
     color: $color-text-offset;
     font-size: $font-normal;
     width: 70%;
-    // text-align: center;
+    text-align: justify;
+    margin: auto;
   }
 }
 

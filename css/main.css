@@ -962,14 +962,12 @@ body {
   }
 }
 
-.intro {
-  background-color: thistle;
-}
-
 .intro__para {
   color: #818a91;
   font-size: 1.6rem;
   width: 70%;
+  text-align: justify;
+  margin: auto;
 }
 
 .section__about {
