@@ -1072,10 +1072,11 @@ body {
   font-size: 1.6rem;
   text-align: justify;
   color: #818a91;
-  margin-bottom: 3rem;
+  margin: 2rem auto;
 }
 
 .section__about .about__skills .courses-certificates .certificates {
+  margin-top: 10rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1087,7 +1088,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .section__about .about__skills .courses-certificates .certificates .cert-wrapper {
