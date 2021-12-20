@@ -7,9 +7,9 @@
   &__para {
     color: $color-text-offset;
     font-size: $font-normal;
-    width: 70%;
+    width: 50%;
     text-align: justify;
-    margin: auto;
+    margin: 2rem auto;
   }
 }
 
@@ -26,7 +26,7 @@
 
   .about__skills,
   .about__personal {
-    width: 70%;
+    width: 50%;
   }
 
   .about__skills {
@@ -156,7 +156,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 70%;
+    width: 50%;
     margin: 3rem auto 5rem;
     border-top: 1px solid $color-text-offset;
 

@@ -965,9 +965,9 @@ body {
 .intro__para {
   color: #818a91;
   font-size: 1.6rem;
-  width: 70%;
+  width: 50%;
   text-align: justify;
-  margin: auto;
+  margin: 2rem auto;
 }
 
 .section__about {
@@ -989,7 +989,7 @@ body {
 
 .section__about .about__skills,
 .section__about .about__personal {
-  width: 70%;
+  width: 50%;
 }
 
 .section__about .about__skills {
@@ -1146,7 +1146,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 70%;
+  width: 50%;
   margin: 3rem auto 5rem;
   border-top: 1px solid #818a91;
 }
@@ -1472,6 +1472,14 @@ body {
     width: 42rem;
     height: 42rem;
   }
+}
+
+.intro__para {
+  color: #818a91;
+  font-size: 1.6rem;
+  width: 50%;
+  text-align: justify;
+  margin: 2rem auto;
 }
 
 .section__projects--item {

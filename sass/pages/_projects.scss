@@ -1,3 +1,18 @@
+.intro {
+  // width: 70%;
+  // margin: auto;
+  // text-align: center;
+  // background-color: thistle;
+
+  &__para {
+    color: $color-text-offset;
+    font-size: $font-normal;
+    width: 50%;
+    text-align: justify;
+    margin: 2rem auto;
+  }
+}
+
 .section__projects {
   &--item {
     width: 100%;
