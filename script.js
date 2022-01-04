@@ -5,9 +5,9 @@
 
 const button = document.querySelector('.btn');
 
-button.addEventListener('click', function (e) {
-  rippleButton(e, button);
-});
+// button.addEventListener('click', function (e) {
+//   rippleButton(e, button);
+// });
 
 function rippleButton(event, element) {
   const x = event.offsetX;

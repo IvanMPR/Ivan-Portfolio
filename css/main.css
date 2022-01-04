@@ -948,7 +948,7 @@ body {
 }
 
 .footer__lower-copy {
-  color: #818a91;
+  color: #b9b8b8;
   font-size: 1.6rem;
   margin: 0 1rem;
 }
@@ -963,7 +963,7 @@ body {
 }
 
 .intro__para {
-  color: #818a91;
+  color: #b9b8b8;
   font-size: 1.6rem;
   width: 50%;
   text-align: justify;
@@ -1026,12 +1026,12 @@ body {
 
 .section__about .about__skills--html {
   padding-top: 3rem;
-  border-top: 1px solid #818a91;
+  border-top: 1px solid #b9b8b8;
 }
 
 .section__about .about__skills--ai {
   padding-bottom: 3rem;
-  border-bottom: 1px solid #818a91;
+  border-bottom: 1px solid #b9b8b8;
 }
 
 .section__about .about__skills--html, .section__about .about__skills--css, .section__about .about__skills--js, .section__about .about__skills--sass, .section__about .about__skills--ai {
@@ -1071,7 +1071,7 @@ body {
   line-height: 1.6;
   font-size: 1.6rem;
   text-align: justify;
-  color: #818a91;
+  color: #b9b8b8;
   margin: 2rem auto;
 }
 
@@ -1149,7 +1149,7 @@ body {
           justify-content: center;
   width: 50%;
   margin: 3rem auto 5rem;
-  border-top: 1px solid #818a91;
+  border-top: 1px solid #b9b8b8;
 }
 
 .section__about .about__personal--ul {
@@ -1159,7 +1159,7 @@ body {
 
 .section__about .about__personal--ul li {
   font-size: 1.6rem;
-  color: #818a91;
+  color: #b9b8b8;
   margin: 1rem 0;
   text-align: justify;
 }
@@ -1476,7 +1476,7 @@ body {
 }
 
 .intro__para {
-  color: #818a91;
+  color: #b9b8b8;
   font-size: 1.6rem;
   width: 50%;
   text-align: justify;
@@ -1584,7 +1584,7 @@ body {
   left: 0;
 }
 
-@media (max-width: 900px) {
+@media (min-width: 37.51em) and (max-width: 56.25em) {
   html {
     font-size: 55%;
   }
