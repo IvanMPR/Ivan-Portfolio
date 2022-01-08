@@ -108,9 +108,26 @@
   }
 }
 
+@include respond(phone) {
+  html {
+    font-size: 55%;
+  }
+  .intro {
+    &__para {
+      width: 95%;
+    }
+  }
+}
+
 @include respond(tab-p) {
   html {
     font-size: 55%;
+  }
+
+  .intro {
+    &__para {
+      width: 90%;
+    }
   }
   .section__projects {
     &--item {

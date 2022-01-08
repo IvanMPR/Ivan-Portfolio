@@ -1584,9 +1584,21 @@ body {
   left: 0;
 }
 
+@media (max-width: 37.5em) {
+  html {
+    font-size: 55%;
+  }
+  .intro__para {
+    width: 95%;
+  }
+}
+
 @media (min-width: 37.51em) and (max-width: 56.25em) {
   html {
     font-size: 55%;
+  }
+  .intro__para {
+    width: 90%;
   }
   .section__projects--item {
     -webkit-box-orient: vertical;
