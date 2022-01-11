@@ -112,9 +112,55 @@
   html {
     font-size: 55%;
   }
+
   .intro {
     &__para {
-      width: 95%;
+      width: 90%;
+    }
+  }
+  .section__projects {
+    &--item {
+      flex-direction: column;
+      height: 70rem;
+      gap: 3rem;
+
+      &-left,
+      &-right {
+        width: 100%;
+
+        &:hover {
+          flex: 1;
+        }
+      }
+
+      &-right {
+        .item__image {
+          position: relative;
+          left: 40%;
+        }
+
+        .item__info {
+          top: 0;
+          left: 0; // ????
+          width: 40%;
+          height: 100%;
+        }
+      }
+
+      &-left {
+        .item__image {
+          position: relative;
+          // left: 0;
+          // left: 0;
+          width: 60%;
+        }
+        .item__info {
+          top: 0;
+          left: 60%; // ????
+          width: 40%;
+          height: 100%;
+        }
+      }
     }
   }
 }
