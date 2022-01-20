@@ -194,6 +194,7 @@
         .item__image {
           position: relative;
           left: 40%;
+          // justify-content: flex-start;
         }
 
         .item__info {
@@ -207,13 +208,16 @@
       &-left {
         .item__image {
           position: relative;
-          // left: 0;
-          // left: 0;
+          // left: -40%;
+          left: 0;
           width: 60%;
+          // display: none;
         }
         .item__info {
           top: 0;
-          left: 60%; // ????
+          // left: 67%; // ????
+          left: 60%;
+          // right: -100%;
           width: 40%;
           height: 100%;
         }

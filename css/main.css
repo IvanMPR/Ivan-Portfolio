@@ -1664,6 +1664,7 @@ body {
   }
   .section__projects--item-left .item__image {
     position: relative;
+    left: 0;
     width: 60%;
   }
   .section__projects--item-left .item__info {
