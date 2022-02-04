@@ -1,3 +1,30 @@
+:root {
+  --color-test: orangered;
+  --color-bgd: #0e141b;
+  --color-bgd-offset: #252526;
+  --color-text: #ffffff;
+  //   --color-text-offset: #818a91;
+  --color-text-offset: #b9b8b8;
+  --color-border: #2d2d2d;
+  //   --color-primary: #ff5277;
+  --color-primary: #ff335f;
+  //   --color-primary-offset:  #ff2957 ;
+  --color-primary-offset: #ff1447;
+  --color-secondary: #43a9a3;
+  --color-codewars: #b1361e;
+  --color-whatsapp: #25d366;
+  --color-viber: #8f5db7;
+  --color-black: #000000;
+
+  --font-small: 1.3rem;
+  --font-normal: 1.6rem;
+  --font-l: 2rem;
+  --font-xl: 2.5rem;
+  --font-section-title: 3rem;
+  --font-menu: 4.5rem;
+  --font-xxl: 6rem;
+}
+
 $color-bgd: #0e141b;
 $color-bgd-offset: #252526;
 $color-text: #ffffff;
