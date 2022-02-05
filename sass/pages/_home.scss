@@ -14,15 +14,19 @@
 
   &__h1--small {
     text-transform: uppercase;
-    color: $color-primary;
-    font-size: $font-l;
+    // color: $color-primary;
+    color: var(--color-primary);
+    // font-size: $font-l;
+    font-size: var(--font-l);
     animation: moveInLeft 1s ease-out;
   }
 
   &__h1--big {
-    color: $color-text;
+    // color: $color-text;
+    color: var(--color-text);
     font-weight: 400;
-    font-size: $font-xxl;
+    // font-size: $font-xxl;
+    font-size: var(--font-xxl);
     animation: moveInRight 1s ease-out;
   }
 

@@ -2,9 +2,12 @@
 // import {resetInitials, toggleNaviButtons} from './pages/modules/global.js';
 
 // Ripple effect on 'Contact me' button
-
+const body = document.querySelector('body')
 const button = document.querySelector('.btn');
-
+const testPara = document.querySelector('.main__h1--small');
+testPara.addEventListener('click', function () {
+  body.dataset.theme = 'light';
+});
 // button.addEventListener('click', function (e) {
 //   rippleButton(e, button);
 // });

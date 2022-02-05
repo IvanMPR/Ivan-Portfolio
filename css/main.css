@@ -14,7 +14,8 @@
  1em = 16px
 */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap");
-:root {
+:root,
+[data-theme='default'] {
   --color-test: orangered;
   --color-bgd: #0e141b;
   --color-bgd-offset: #252526;
@@ -28,6 +29,25 @@
   --color-whatsapp: #25d366;
   --color-viber: #8f5db7;
   --color-black: #000000;
+  --font-small: 1.3rem;
+  --font-normal: 1.6rem;
+  --font-l: 2rem;
+  --font-xl: 2.5rem;
+  --font-section-title: 3rem;
+  --font-menu: 4.5rem;
+  --font-xxl: 6rem;
+}
+
+.light-layout,
+[data-theme='light'] {
+  --color-bgd: #ffffff;
+  --color-bgd-offset: #f7f7f9;
+  --color-text: #373a3c;
+  --color-text-offset: #818a91;
+  --color-border: #eceeef;
+  --color-primary: #ff335f;
+  --color-primary-offset: #ff1447;
+  --color-secondary: #43a9a3;
   --font-small: 1.3rem;
   --font-normal: 1.6rem;
   --font-l: 2rem;
@@ -311,7 +331,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #0e141b;
+  background: var(--color-bgd);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 2rem;
@@ -327,11 +347,11 @@ ul {
 a:link,
 a:visited {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 p {
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 body {
@@ -1419,16 +1439,16 @@ body {
 
 .main__h1--small {
   text-transform: uppercase;
-  color: #ff335f;
-  font-size: 2rem;
+  color: var(--color-primary);
+  font-size: var(--font-l);
   -webkit-animation: moveInLeft 1s ease-out;
           animation: moveInLeft 1s ease-out;
 }
 
 .main__h1--big {
-  color: #ffffff;
+  color: var(--color-text);
   font-weight: 400;
-  font-size: 6rem;
+  font-size: var(--font-xxl);
   -webkit-animation: moveInRight 1s ease-out;
           animation: moveInRight 1s ease-out;
 }
