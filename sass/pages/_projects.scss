@@ -5,8 +5,10 @@
   // background-color: thistle;
 
   &__para {
-    color: $color-text-offset;
-    font-size: $font-normal;
+    // color: $color-text-offset;
+    // font-size: $font-normal;
+    color: var(--color-text-offset);
+    font-size: var(--font-normal);
     // width: 100%;
     width: 50%;
     text-align: justify;
@@ -22,7 +24,8 @@
     display: flex;
     padding: 1rem;
     gap: 1rem;
-    border: 0.25rem solid $color-text;
+    // border: 0.25rem solid $color-text;
+    border: 0.25rem solid var(--color-text);
 
     &-left,
     &-right {
@@ -48,27 +51,35 @@
 
       .item__info {
         position: absolute;
-        background: rgba($color-text, $alpha: 0.8);
+        // background: rgba($color-text, $alpha: 0.8);
+        background: rgba(var(--color-text), 0.8);
         padding: 1rem;
         text-align: center;
         transition: all 0.5s ease;
 
         &--title {
-          font-size: $font-l;
-          color: $color-bgd;
+          // font-size: $font-l;
+          // color: $color-bgd;
+          font-size: var(--font-l);
+          color: var(--color-bgd);
         }
 
         &--live-link {
-          color: $color-bgd;
-          font-size: $font-normal;
+          // color: $color-bgd;
+          // font-size: $font-normal;
+          color: var(--color-bgd);
+          font-size: var(--font-normal);
           text-decoration: underline;
-          text-decoration-color: $color-primary;
+          // text-decoration-color: $color-primary;
+          text-decoration-color: var(--color-primary);
           text-underline-offset: 0.5rem;
         }
 
         &--desc-text {
-          color: $color-bgd;
-          font-size: $font-normal;
+          // color: $color-bgd;
+          // font-size: $font-normal;
+          color: var(--color-bgd);
+          font-size: var(--font-normal);
           font-style: italic;
         }
       }

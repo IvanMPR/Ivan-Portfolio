@@ -7,13 +7,16 @@
   margin-bottom: 25rem;
 
   &--message {
-    color: $color-text;
-    font-size: $font-xl;
+    // color: $color-text;
+    color: var(--color-text);
+    // font-size: $font-xl;
+    font-size: var(--font-xl);
 
     &-icon {
       display: block;
       margin-top: 5rem;
-      color: $color-primary;
+      // color: $color-primary;
+      color: var(--color-primary);
     }
   }
 }
