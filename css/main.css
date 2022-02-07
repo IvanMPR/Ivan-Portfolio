@@ -1520,8 +1520,8 @@ body {
 }
 
 .intro__para {
-  color: #b9b8b8;
-  font-size: 1.6rem;
+  color: var(--color-text-offset);
+  font-size: var(--font-normal);
   width: 50%;
   text-align: justify;
   margin: 2rem auto;
@@ -1535,7 +1535,7 @@ body {
   display: flex;
   padding: 1rem;
   gap: 1rem;
-  border: 0.25rem solid #ffffff;
+  border: 0.25rem solid var(--color-text);
 }
 
 .section__projects--item-left, .section__projects--item-right {
@@ -1567,7 +1567,7 @@ body {
 
 .section__projects--item-left .item__info, .section__projects--item-right .item__info {
   position: absolute;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(var(--color-text), 0.8);
   padding: 1rem;
   text-align: center;
   -webkit-transition: all 0.5s ease;
@@ -1575,22 +1575,22 @@ body {
 }
 
 .section__projects--item-left .item__info--title, .section__projects--item-right .item__info--title {
-  font-size: 2rem;
-  color: #0e141b;
+  font-size: var(--font-l);
+  color: var(--color-bgd);
 }
 
 .section__projects--item-left .item__info--live-link, .section__projects--item-right .item__info--live-link {
-  color: #0e141b;
-  font-size: 1.6rem;
+  color: var(--color-bgd);
+  font-size: var(--font-normal);
   text-decoration: underline;
-  -webkit-text-decoration-color: #ff335f;
-          text-decoration-color: #ff335f;
+  -webkit-text-decoration-color: var(--color-primary);
+          text-decoration-color: var(--color-primary);
   text-underline-offset: 0.5rem;
 }
 
 .section__projects--item-left .item__info--desc-text, .section__projects--item-right .item__info--desc-text {
-  color: #0e141b;
-  font-size: 1.6rem;
+  color: var(--color-bgd);
+  font-size: var(--font-normal);
   font-style: italic;
 }
 
@@ -1736,14 +1736,14 @@ body {
 }
 
 .section__thanks--message {
-  color: #ffffff;
-  font-size: 2.5rem;
+  color: var(--color-text);
+  font-size: var(--font-xl);
 }
 
 .section__thanks--message-icon {
   display: block;
   margin-top: 5rem;
-  color: #ff335f;
+  color: var(--color-primary);
 }
 
 .fa-bars {

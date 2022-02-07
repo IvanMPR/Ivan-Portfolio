@@ -37,7 +37,8 @@
     height: 45rem;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     background-image: linear-gradient(#fff, #fff);
-    outline: 0.25rem solid $color-primary;
+    // outline: 0.25rem solid $color-primary;
+    outline: 0.25rem solid var(--color-primary);
     outline-offset: 1rem;
 
     &--inner {
