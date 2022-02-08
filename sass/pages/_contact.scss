@@ -20,7 +20,8 @@
   }
 
   &__state {
-    font-size: $font-normal;
+    // font-size: $font-normal;
+    font-size: var(--font-normal);
   }
 }
 
@@ -41,7 +42,8 @@
 
   &__reveal,
   &__hide {
-    color: $color-text;
+    // color: $color-text;
+    color: var(--color-text);
     transition: all 0.2s;
     animation: colorize 3s alternate-reverse infinite;
 
@@ -51,8 +53,10 @@
   }
 
   &__info {
-    font-size: $font-normal;
-    color: $color-text;
+    // font-size: $font-normal;
+    // color: $color-text;
+    font-size: var(--font-normal);
+    color: var(--color-text);
     letter-spacing: 2px;
     display: flex;
     align-items: center;
@@ -68,22 +72,27 @@
     }
 
     &--viber {
-      color: $color-viber;
+      // color: $color-viber;
+      color: var(--color-viber);
     }
     &--whatsapp {
-      color: $color-whatsapp;
+      // color: $color-whatsapp;
+      color: var(--color-whatsapp);
     }
 
     &--data {
-      font-size: $font-l;
+      // font-size: $font-l;
+      font-size: var(--font-l);
     }
     // @media
     @include respond(phone) {
       & {
-        font-size: $font-small;
+        // font-size: $font-small;
+        font-size: var(--font-small);
 
         &--data {
-          font-size: $font-normal;
+          // font-size: $font-normal;
+          font-size: var(--font-normal);
         }
       }
     }
@@ -96,14 +105,17 @@
 
   &__label {
     margin-bottom: 1rem;
-    color: $color-text;
-    font-size: $font-normal;
+    // color: $color-text;
+    // font-size: $font-normal;
+    color: var(--color-text);
+    font-size: var(--font-normal);
   }
 
   &__input {
     padding: 1rem;
     font-family: 'Poppins', sans-serif;
-    font-size: $font-l;
+    // font-size: $font-l;
+    font-size: var(--font-l);
   }
 
   &__mini-wrapper {

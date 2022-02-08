@@ -1292,7 +1292,7 @@ body {
 }
 
 .location__state {
-  font-size: 1.6rem;
+  font-size: var(--font-normal);
 }
 
 .phone {
@@ -1315,7 +1315,7 @@ body {
 }
 
 .phone__reveal, .phone__hide {
-  color: #ffffff;
+  color: var(--color-text);
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   animation: colorize 3s alternate-reverse infinite;
@@ -1326,8 +1326,8 @@ body {
 }
 
 .phone__info {
-  font-size: 1.6rem;
-  color: #ffffff;
+  font-size: var(--font-normal);
+  color: var(--color-text);
   letter-spacing: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1349,23 +1349,23 @@ body {
 }
 
 .phone__info--viber {
-  color: #8f5db7;
+  color: var(--color-viber);
 }
 
 .phone__info--whatsapp {
-  color: #25d366;
+  color: var(--color-whatsapp);
 }
 
 .phone__info--data {
-  font-size: 2rem;
+  font-size: var(--font-l);
 }
 
 @media (max-width: 37.5em) {
   .phone__info {
-    font-size: 1.3rem;
+    font-size: var(--font-small);
   }
   .phone__info--data {
-    font-size: 1.6rem;
+    font-size: var(--font-normal);
   }
 }
 
@@ -1376,14 +1376,14 @@ body {
 
 .form__label {
   margin-bottom: 1rem;
-  color: #ffffff;
-  font-size: 1.6rem;
+  color: var(--color-text);
+  font-size: var(--font-normal);
 }
 
 .form__input {
   padding: 1rem;
   font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
+  font-size: var(--font-l);
 }
 
 .form__mini-wrapper {
@@ -1462,7 +1462,7 @@ body {
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
   background-image: linear-gradient(#fff, #fff);
-  outline: 0.25rem solid #ff335f;
+  outline: 0.25rem solid var(--color-primary);
   outline-offset: 1rem;
 }
 
@@ -1567,7 +1567,7 @@ body {
 
 .section__projects--item-left .item__info, .section__projects--item-right .item__info {
   position: absolute;
-  background: rgba(var(--color-text), 0.8);
+  background: var(--white-text-transparent);
   padding: 1rem;
   text-align: center;
   -webkit-transition: all 0.5s ease;
