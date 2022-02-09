@@ -1007,8 +1007,8 @@ body {
 }
 
 .intro__para {
-  color: #b9b8b8;
-  font-size: 1.6rem;
+  color: var(--color-text-offset);
+  font-size: var(--font-normal);
   width: 50%;
   text-align: justify;
   margin: 2rem auto;
@@ -1070,12 +1070,12 @@ body {
 
 .section__about .about__skills--html {
   padding-top: 3rem;
-  border-top: 1px solid #b9b8b8;
+  border-top: 1px solid var(--color-text-offset);
 }
 
 .section__about .about__skills--ai {
   padding-bottom: 3rem;
-  border-bottom: 1px solid #b9b8b8;
+  border-bottom: 1px solid var(--color-text-offset);
 }
 
 .section__about .about__skills--html, .section__about .about__skills--css, .section__about .about__skills--js, .section__about .about__skills--sass, .section__about .about__skills--ai {
@@ -1095,7 +1095,7 @@ body {
 .section__about .about__skills .skill-bar {
   width: 70%;
   height: 1rem;
-  background: #252526;
+  background: var(--color-bgd-offset);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1106,16 +1106,16 @@ body {
 
 .section__about .about__skills .skill-bar-inner {
   height: 0.5rem;
-  background-image: -webkit-gradient(linear, left top, right top, from(#ff335f), to(#0e141b));
-  background-image: linear-gradient(to right, #ff335f, #0e141b);
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--color-primary)), to(var(--color-bgd)));
+  background-image: linear-gradient(to right, var(--color-primary), var(--color-bgd));
   background-size: 400%;
 }
 
 .section__about .about__skills .courses-certificates .courses-intro {
   line-height: 1.6;
-  font-size: 1.6rem;
+  font-size: var(--font-normal);
   text-align: justify;
-  color: #b9b8b8;
+  color: var(--color-text-offset);
   margin: 2rem auto;
 }
 
@@ -1151,18 +1151,18 @@ body {
 
 .section__about .about__skills .courses-certificates .certificates .cert-wrapper .course-title {
   width: 50%;
-  font-size: 1.6rem;
+  font-size: var(--font-normal);
   font-style: italic;
   text-decoration: underline;
-  -webkit-text-decoration-color: #ffffff;
-          text-decoration-color: #ffffff;
+  -webkit-text-decoration-color: var(--color-text);
+          text-decoration-color: var(--color-text);
 }
 
 .section__about .about__skills .courses-certificates .certificates .cert-wrapper .course-title a:link,
 .section__about .about__skills .courses-certificates .certificates .cert-wrapper .course-title a:visited {
-  color: #ffffff;
-  -webkit-text-decoration-color: #ffffff;
-          text-decoration-color: #ffffff;
+  color: var(--color-text);
+  -webkit-text-decoration-color: var(--color-text);
+          text-decoration-color: var(--color-text);
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
@@ -1193,7 +1193,7 @@ body {
           justify-content: center;
   width: 50%;
   margin: 3rem auto 5rem;
-  border-top: 1px solid #b9b8b8;
+  border-top: 1px solid var(--color-text-offset);
 }
 
 .section__about .about__personal--ul {
@@ -1202,8 +1202,8 @@ body {
 }
 
 .section__about .about__personal--ul li {
-  font-size: 1.6rem;
-  color: #b9b8b8;
+  font-size: var(--font-normal);
+  color: var(--color-text-offset);
   margin: 1rem 0;
   text-align: justify;
 }
@@ -1214,8 +1214,8 @@ body {
 }
 
 .section__about .cc {
-  font-size: 1.6rem;
-  color: #ffffff;
+  font-size: var(--font-normal);
+  color: var(--color-text);
   text-align: center;
   margin: 4rem auto;
   font-weight: 400;
