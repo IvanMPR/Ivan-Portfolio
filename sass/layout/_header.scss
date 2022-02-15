@@ -294,7 +294,7 @@
       }
     }
   }
-  // do ovde sam stao sa promenom varijabli, jos ovo dole
+
   @include respond(tab-p) {
     & {
       // width: 90%;
@@ -309,7 +309,8 @@
         width: 5rem;
         height: 5rem;
         border-radius: 50%;
-        background: $color-bgd-offset;
+        // background: $color-bgd-offset;
+        background: var(--color-bgd-offset);
 
         // Checkbox hack styles
         .navigation {
@@ -337,7 +338,8 @@
             // add fixed position to menu ???
           }
           &__button {
-            background-color: $color-bgd-offset;
+            // background-color: $color-bgd-offset;
+            background-color: var(--color-bgd-offset);
             height: 5rem;
             width: 5rem;
             border-radius: 50%;
@@ -359,7 +361,8 @@
             height: 4rem;
             width: 4rem;
             border-radius: 50%;
-            background-color: $color-black;
+            // background-color: $color-black;
+            background-color: var(--color-black);
             z-index: 1000;
 
             transition: transform 0.4s ease-in;
@@ -389,23 +392,29 @@
           &__link {
             &:link,
             &:visited {
-              color: $color-text;
+              // color: $color-text;
+              color: var(--color-text);
               display: inline-block;
-              font-size: $font-menu;
+              // font-size: $font-menu;
+              font-size: var(--font-menu);
               padding-bottom: 0.5rem;
-              border-bottom: 0.5rem solid $color-bgd-offset;
+              // border-bottom: 0.5rem solid $color-bgd-offset;
+              border-bottom: 0.5rem solid var(--color-bgd-offset);
               transition: border 0.25s;
             }
 
             &:hover,
             &:active {
-              border-bottom: 0.5rem solid $color-primary;
+              // border-bottom: 0.5rem solid $color-primary;
+              border-bottom: 0.5rem solid var(--color-primary);
             }
           }
 
           &__link-ordinal {
-            color: $color-text;
-            font-size: $font-menu;
+            // color: $color-text;
+            // font-size: $font-menu;
+            color: var(--color-text);
+            font-size: var(--font-menu);
             font-weight: bold;
             margin-right: 2rem;
           }
@@ -419,7 +428,8 @@
             &::after {
               width: 2.75rem;
               height: 2px;
-              background-color: $color-text;
+              // background-color: $color-text;
+              background-color: var(--color-text);
               display: inline-block;
               border-radius: 10rem;
             }
