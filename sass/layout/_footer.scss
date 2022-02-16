@@ -3,7 +3,8 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  border-top: 2px solid $color-bgd-offset;
+  // border-top: 2px solid $color-bgd-offset;
+  border-top: 2px solid var(--color-bgd-offset);
 
   &__upper {
     width: 100%;
@@ -18,12 +19,14 @@
 
   & .fa-github,
   & .fa-linkedin {
-    color: $color-text;
+    // color: $color-text;
+    color: var(--color-text);
     margin-right: 2rem;
   }
 
   &__cv-button {
-    font-size: $font-normal;
+    // font-size: $font-normal;
+    font-size: var(--font-normal);
   }
 
   &__languages--english-flag,
