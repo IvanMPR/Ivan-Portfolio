@@ -38,13 +38,17 @@
 
   &__lower {
     &-licence {
-      font-size: $font-small;
-      color: $color-bgd-offset;
+      // font-size: $font-small;
+      // color: $color-bgd-offset;
+      font-size: var(--font-small);
+      color: var(--color-bgd-offset);
     }
 
     &-copy {
-      color: $color-text-offset;
-      font-size: $font-normal;
+      // color: $color-text-offset;
+      // font-size: $font-normal;
+      color: var(--color-text-offset);
+      font-size: var(--font-normal);
       margin: 0 1rem;
       // text-align: center;
     }
