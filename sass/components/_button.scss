@@ -9,13 +9,17 @@
 }
 
 .btn-hero-contact {
-  background: $color-primary;
-  color: $color-text;
-  font-size: $font-l;
+  // background: $color-primary;
+  // color: $color-text;
+  // font-size: $font-l;
+  background: var(--color-primary);
+  color: var(--color-text);
+  font-size: var(--font-l);
   animation: moveInBottom 0.5s ease-out 0.75s backwards;
 
   &:hover {
-    background: $color-primary-offset;
+    // background: $color-primary-offset;
+    background: var(--color-primary-offset);
   }
 }
 
@@ -24,17 +28,21 @@
   padding: 1rem;
   margin-top: 2rem;
   width: 100%;
-  background: $color-primary;
-  color: $color-text;
+  // background: $color-primary;
+  // color: $color-text;
+  background: var(--color-primary);
+  color: var(--color-text);
   position: relative;
   cursor: pointer;
   transition: background 0.2s;
   font-family: 'Poppins', sans-serif;
-  font-size: $font-l;
+  // font-size: $font-l;
+  font-size: var(--font-l);
   overflow: hidden;
   border-radius: 2px;
 
   &:hover {
-    background: $color-primary-offset;
+    // background: $color-primary-offset;
+    background: var(--color-primary-offset);
   }
 }
