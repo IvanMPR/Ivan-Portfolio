@@ -1,9 +1,11 @@
 .active {
-  border-bottom: 0.5rem solid $color-primary !important;
+  // border-bottom: 0.5rem solid $color-primary !important;
+  border-bottom: 0.5rem solid var(--color-primary) !important;
 }
 
 .h3-active {
-  color: $color-text;
+  // color: $color-text;
+  color: var(--color-text);
 }
 
 // .btn-animated {
