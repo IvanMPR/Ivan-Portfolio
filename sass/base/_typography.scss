@@ -7,20 +7,25 @@ body {
 // h2
 .section__title {
   text-align: center;
-  color: $color-text;
-  font-size: $font-xl;
+  // color: $color-text;
+  // font-size: $font-xl;
+  color: var(--color-text);
+  font-size: var(--font-xl);
   font-weight: 400;
 
   &--icon {
-    color: $color-primary;
+    // color: $color-primary;
+    color: var(--color-primary);
     margin-left: 2rem;
   }
 }
 // h3
 .section__subtitle {
   text-align: center;
-  color: $color-text;
-  font-size: $font-normal;
+  // color: $color-text;
+  // font-size: $font-normal;
+  color: var(--color-text);
+  font-size: var(--font-normal);
   font-weight: 400;
   // padding-bottom: 1rem;
   // border-bottom: 0.5rem solid $color-bgd;
@@ -40,7 +45,8 @@ body {
   // }
 
   &--icon {
-    color: $color-text;
+    // color: $color-text;
+    color: var(--color-text);
     margin-right: 1rem;
     // transition: all 0.2s;
   }
