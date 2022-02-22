@@ -90,10 +90,12 @@
 
 @keyframes colorize {
   0% {
-    color: $color-text;
+    // color: $color-text;
+    color: var(--color-text);
   }
   100% {
-    color: $color-primary;
+    // color: $color-primary;
+    color: var(--color-primary);
   }
 }
 
