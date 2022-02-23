@@ -79,7 +79,50 @@
   }
 
   /* Theme toggler - middle part of the navbar */
+  input[type='checkbox'] {
+    visibility: hidden;
+    &:checked + label {
+      transform: rotate(360deg);
+      background-color: #000;
+      &:before {
+        transform: translateX(90px);
+        background-color: #fff;
+      }
+    }
+  }
 
+  label {
+    display: flex;
+    // width: 180px;
+    // height: 90px;
+    // border: 6px solid;
+    width: 9rem;
+    height: 4.5rem;
+    border: 0.4rem solid;
+    border-radius: 99em;
+    position: relative;
+    transition: transform 0.75s ease-in-out;
+    transform-origin: 50% 50%;
+    cursor: pointer;
+
+    &:before {
+      transition: transform 0.75s ease;
+      transition-delay: 0.5s;
+      content: '';
+      display: block;
+      position: absolute;
+      // width: 54px;
+      // height: 54px;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: #000;
+      border-radius: 50%;
+      top: 12px;
+      left: 12px;
+      // top: 0.6rem;
+      // left: 0.6rem;
+    }
+  }
   // &__theme-toggler {
   //   position: relative;
   //   width: 100%;
