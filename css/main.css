@@ -528,7 +528,6 @@ body {
   margin-bottom: 2rem;
   /* Parent container for two divs, that has different backgrounds, flipped on hover*/
   /* Theme toggler - middle part of the navbar */
-  /* Position of the bulb inside of the parent */
 }
 
 .header__navbar {
@@ -619,23 +618,30 @@ body {
           transform: rotateY(0);
 }
 
-.header input[type='checkbox'] {
+.header__theme-toggler {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  /* Position of the bulb inside of the parent */
+}
+
+.header__theme-toggler input[type='checkbox'] {
   visibility: hidden;
 }
 
-.header input[type='checkbox']:checked + label {
+.header__theme-toggler input[type='checkbox']:checked + label {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
   background-color: var(--color-primary);
 }
 
-.header input[type='checkbox']:checked + label:before {
+.header__theme-toggler input[type='checkbox']:checked + label:before {
   -webkit-transform: translateX(2.25rem);
           transform: translateX(2.25rem);
   background-color: var(--color-bgd);
 }
 
-.header label {
+.header__theme-toggler label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -653,7 +659,7 @@ body {
   cursor: pointer;
 }
 
-.header label:before {
+.header__theme-toggler label:before {
   -webkit-transition: -webkit-transform 0.75s ease;
   transition: -webkit-transform 0.75s ease;
   transition: transform 0.75s ease;
@@ -705,6 +711,9 @@ body {
 }
 
 @media (max-width: 37.5em) {
+  .header__navbar--middle {
+    margin-right: auto;
+  }
   .header__ul {
     display: none;
   }
