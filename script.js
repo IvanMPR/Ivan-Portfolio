@@ -4,11 +4,9 @@
 // Ripple effect on 'Contact me' button
 const body = document.querySelector('body')
 const button = document.querySelector('.btn');
-const testPara = document.querySelector('.main__h1--small');
+
 const toggler = document.getElementById('toggle');
-testPara.addEventListener('click', function () {
-  body.dataset.theme = 'light';
-});
+
 toggler.addEventListener('change', function () {
   if (this.checked) {
     console.log('Checked');
