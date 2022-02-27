@@ -1,5 +1,8 @@
 // This module contains code required in every page (ex. hamburger menu functionality)
 
+// switch between light and dark modes
+// /////////////////////////////////////
+
 // export function openModal() {
 //   const hamburger = document.querySelector('.header__hamburger');
 //   const modal = document.querySelector('.header__hamburger-modal');
@@ -28,6 +31,3 @@ export function openModal(el, subEl) {
 //     subEl.classList.remove('scale-up');
 //   });
 // }
-
-
-

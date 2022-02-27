@@ -95,7 +95,8 @@
       &:checked + label {
         transform: rotate(360deg);
         // background-color: #000;
-        background-color: var(--color-primary);
+        // background-color: var(--color-primary);
+        background-color: var(--color-text);
         &:before {
           // transform: translateX(90px);
           // transform: translateX(4.5rem);
@@ -212,11 +213,12 @@
   @include respond(phone) {
     // move theme toggler when breakpoint is reached
     & {
-      &__navbar {
-        &--middle {
-          // margin-left: auto;
-        }
-      }
+      // &__navbar {
+      //   &--middle {
+      //commented out for empty ruleset, yet to decide weather this is to be deleted
+      //     // margin-left: auto;
+      //   }
+      // }
       // width: 93%;
       // Hide horizontal menu when breakpoint is reached
       &__ul {

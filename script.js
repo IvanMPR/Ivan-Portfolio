@@ -1,21 +1,15 @@
 //prettier-ignore
-// import {resetInitials, toggleNaviButtons} from './pages/modules/global.js';
+// import {changeColorTheme} from './pages/modules/global.js';
 
 // Ripple effect on 'Contact me' button
-const body = document.querySelector('body')
+const body = document.querySelector('body');
 const button = document.querySelector('.btn');
-
+// Change color theme
 const toggler = document.getElementById('toggle');
-
 toggler.addEventListener('change', function () {
-  if (this.checked) {
-    console.log('Checked');
-    body.dataset.theme = 'light';
-  } else {
-    console.log('Not checked');
-    body.dataset.theme = 'default';
-  }
+  return (body.dataset.theme = `${this.checked ? 'light' : 'default'}`);
 });
+
 // button.addEventListener('click', function (e) {
 //   rippleButton(e, button);
 // });
