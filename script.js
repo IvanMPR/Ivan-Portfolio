@@ -1,13 +1,25 @@
 //prettier-ignore
 // import {changeColorTheme} from './pages/modules/global.js';
-
+// localStorage.clear()
 // Ripple effect on 'Contact me' button
 const body = document.querySelector('body');
 const button = document.querySelector('.btn');
 // Change color theme
+let theme = body.dataset[localStorage.getItem('theme')];
+
+console.log(localStorage);
 const toggler = document.getElementById('toggle');
 toggler.addEventListener('change', function () {
-  return (body.dataset.theme = `${this.checked ? 'light' : 'default'}`);
+  if (this.checked) {
+    body.dataset.theme = 'light';
+    localStorage.setItem('theme', 'light');
+  } else {
+    body.dataset.theme = 'default';
+    localStorage.setItem('theme', 'default');
+  }
+  console.log(localStorage);
+  // localStorage.setItem('light', this.checked);
+  // return (body.dataset.theme = `${this.checked ? 'light' : 'default'}`);
 });
 
 // button.addEventListener('click', function (e) {
