@@ -5,9 +5,9 @@
 const body = document.querySelector('body');
 const button = document.querySelector('.btn');
 // Change color theme
-let theme = body.dataset[localStorage.getItem('theme')];
-
-console.log(localStorage);
+let th = body.dataset[localStorage.getItem('theme')];
+body.dataset.theme = localStorage.getItem('theme');
+// console.log(localStorage);
 const toggler = document.getElementById('toggle');
 toggler.addEventListener('change', function () {
   if (this.checked) {

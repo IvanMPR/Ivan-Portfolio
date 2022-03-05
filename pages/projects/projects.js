@@ -11,17 +11,19 @@ window.addEventListener('load', function () {
     toggler.checked = false;
     body.dataset.theme = 'default';
   }
+  console.log(localStorage);
 });
 
 toggler.addEventListener('change', function () {
   if (this.checked) {
-    localStorage.setItem('light', this.checked);
+    localStorage.setItem('theme', 'light');
     body.dataset.theme = 'light';
   } else {
-    localStorage.setItem('light', false);
+    localStorage.setItem('theme', 'default');
     body.dataset.theme = 'default';
   }
   console.log(localStorage);
+
   // localStorage.setItem('light', this.checked);
   // return (body.dataset.theme = `${this.checked ? 'light' : 'default'}`);
 });
