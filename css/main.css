@@ -630,8 +630,6 @@ body {
 }
 
 .header__theme-toggler input[type='checkbox']:checked + label {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
   background-color: var(--color-text);
 }
 
@@ -650,22 +648,20 @@ body {
   border: 2px solid var(--color-text);
   border-radius: 99em;
   position: relative;
-  -webkit-transition: -webkit-transform 0.75s ease-in-out;
-  transition: -webkit-transform 0.75s ease-in-out;
-  transition: transform 0.75s ease-in-out;
-  transition: transform 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
+  -webkit-transition: -webkit-transform 0.25s ease-in-out;
+  transition: -webkit-transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
   cursor: pointer;
 }
 
 .header__theme-toggler label:before {
-  -webkit-transition: -webkit-transform 0.75s ease;
-  transition: -webkit-transform 0.75s ease;
-  transition: transform 0.75s ease;
-  transition: transform 0.75s ease, -webkit-transform 0.75s ease;
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
+  -webkit-transition: -webkit-transform 0.25s ease;
+  transition: -webkit-transform 0.25s ease;
+  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, -webkit-transform 0.25s ease;
   content: '';
   display: block;
   position: absolute;
