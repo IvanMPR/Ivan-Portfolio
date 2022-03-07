@@ -21,6 +21,16 @@ toggler.addEventListener('change', function () {
   // localStorage.setItem('light', this.checked);
   // return (body.dataset.theme = `${this.checked ? 'light' : 'default'}`);
 });
+window.addEventListener('load', function () {
+  if (localStorage.getItem('theme') === 'light') {
+    toggler.checked = true;
+    body.dataset.theme = 'light';
+  } else {
+    toggler.checked = false;
+    body.dataset.theme = 'default';
+  }
+  console.log(localStorage);
+});
 
 // button.addEventListener('click', function (e) {
 //   rippleButton(e, button);
