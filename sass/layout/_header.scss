@@ -192,7 +192,7 @@
     padding-bottom: 0.5rem;
     // border-bottom: 0.5rem solid $color-bgd;
     border-bottom: 0.5rem solid var(--color-bgd);
-    transition: border 0.25s;
+    // transition: border 0.25s;
 
     &:hover {
       // border-bottom: 0.5rem solid $color-bgd-offset;
@@ -323,7 +323,7 @@
               padding-bottom: 0.5rem;
               // border-bottom: 0.5rem solid $color-bgd-offset;
               border-bottom: 0.5rem solid var(--color-bgd-offset);
-              transition: border 0.25s;
+              // transition: border 0.25s;
             }
 
             &:hover,
@@ -481,7 +481,7 @@
               padding-bottom: 0.5rem;
               // border-bottom: 0.5rem solid $color-bgd-offset;
               border-bottom: 0.5rem solid var(--color-bgd-offset);
-              transition: border 0.25s;
+              // transition: border 0.25s;
             }
 
             &:hover,
