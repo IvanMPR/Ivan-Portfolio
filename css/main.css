@@ -678,8 +678,6 @@ body {
   font-size: var(--font-normal);
   padding-bottom: 0.5rem;
   border-bottom: 0.5rem solid var(--color-bgd);
-  -webkit-transition: border 0.25s;
-  transition: border 0.25s;
 }
 
 .header__link:hover {
@@ -800,8 +798,6 @@ body {
     font-size: var(--font-menu);
     padding-bottom: 0.5rem;
     border-bottom: 0.5rem solid var(--color-bgd-offset);
-    -webkit-transition: border 0.25s;
-    transition: border 0.25s;
   }
   .header__hamburger .navigation__link:hover, .header__hamburger .navigation__link:active {
     border-bottom: 0.5rem solid var(--color-primary);
@@ -942,8 +938,6 @@ body {
     font-size: var(--font-menu);
     padding-bottom: 0.5rem;
     border-bottom: 0.5rem solid var(--color-bgd-offset);
-    -webkit-transition: border 0.25s;
-    transition: border 0.25s;
   }
   .header__hamburger .navigation__link:hover, .header__hamburger .navigation__link:active {
     border-bottom: 0.5rem solid var(--color-primary);
